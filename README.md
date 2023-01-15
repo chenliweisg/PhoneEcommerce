@@ -11,10 +11,14 @@ click here to view the prototype <u>link here</u>
 <ul>
   <li>Feature 1 - scroll back to top button</li>
   <li>Feature 2 - Social media icon will disappear when scrolled to the bottom of the page. (https://www.mockplus.com/blog/post/interactive-website-example)</li>
-  <li>Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, snake & ladder )</li>
+  <li>Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, snake & ladder, guess the song name )</li>
   <li>Feature 4 - Product recommendation.</li>
   <li>Feature 5 - Daily login reward</li>
   <li>Feature 6 - Search for product</li>
+  <li>Feature 7 - left and right button to view more products (https://blog.hubspot.com/website/interactive-websites)</li>
+  <li>Feature 8 - video, image, sound</li>
+  <li>Feature 9 - Map?</li>
+  <li>Feature 10 - Rating?</li>
 </ul>
 
 # Technology used
