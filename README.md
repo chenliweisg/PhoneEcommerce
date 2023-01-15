@@ -4,7 +4,7 @@
 
 <h3>Persona</h3>
 
-<p>click here to view the prototype <u>link here</u></p>
+click here to view the prototype <u>link here</u>
 
 # Features
 <h3>Features</h3>
