@@ -19,6 +19,9 @@ click here to view the prototype <u>link here</u>
   <li>Feature 8 - video, image, sound</li>
   <li>Feature 9 - Map?</li>
   <li>Feature 10 - Rating?</li>
+  <li>Feature 11 - Greet username</li>
+  <li>Feature 12 - change username & password & set profile image</li>
+  <li>Feature 13 - top up user balance</li>
 </ul>
 
 # Technology used
