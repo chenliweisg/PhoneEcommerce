@@ -1,8 +1,8 @@
-# Ecommerce phone
+# T07 Phone
+
 
 ## Design Process
 
-<h3>Persona</h3>
 
 click here to view the prototype <u>link here</u>
 
