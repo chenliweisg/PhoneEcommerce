@@ -21,7 +21,6 @@ click here to view the prototype <u>link here</u>
 - [ ] Feature 11 - Greet username
 - [ ] Feature 12 - change username & password & set profile image
 - [ ] Feature 13 - top up user balance
-- [ ] https://github.com/octo-org/octo-repo/issues/740
 
 # Technology used
 <ul>
