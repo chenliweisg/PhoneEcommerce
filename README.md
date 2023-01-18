@@ -1,5 +1,5 @@
 # Ecommerce phone
-r
+> Text that is a quote
 use `git status` to list all new or modified files that haven't yet been committed.
 # Design Process
 
