@@ -34,7 +34,8 @@ click here to view the prototype <u>link here</u>
 - [ ] Feature 11 - Greet username
 - [ ] Feature 12 - change username & password & set profile image
 - [ ] Feature 13 - top up user balance
-- [ ] Feature 13 - filter category
+- [ ] Feature 14 - filter category
+- [ ] Feature 15 - Add/remove quantity
 
 ## Technology used
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
