@@ -1,5 +1,6 @@
 # Ecommerce phone
 > dd
+> Use `git status` to list all new or modified files that haven't yet been committed.
 # Design Process
 
 <h3>Persona</h3>
