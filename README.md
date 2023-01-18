@@ -8,7 +8,7 @@ use `git status` to list all new or modified files that haven't yet been committ
 click here to view the prototype <u>link here</u>
 
 # Features
-<h3>Features</h3>
+- [x] #739
 - [x] #Feature 1 - scroll back to top button
 <ul>
   -[] Feature 1 - scroll back to top button
