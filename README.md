@@ -8,10 +8,7 @@ use `git status` to list all new or modified files that haven't yet been committ
 click here to view the prototype <u>link here</u>
 
 # Features
-- [x] 739
-- [x] #Feature 1 - scroll back to top button
-<ul>
-  -[] Feature 1 - scroll back to top button
+- [] Feature 1 - scroll back to top button
   <li>Feature 2 - Social media icon will disappear when scrolled to the bottom of the page. (https://www.mockplus.com/blog/post/interactive-website-example)</li>
   <li>Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, snake & ladder, guess the song name )</li>
   <li>Feature 4 - Product recommendation.</li>
@@ -24,7 +21,6 @@ click here to view the prototype <u>link here</u>
   <li>Feature 11 - Greet username</li>
   <li>Feature 12 - change username & password & set profile image</li>
   <li>Feature 13 - top up user balance</li>
-</ul>
 
 # Technology used
 <ul>
