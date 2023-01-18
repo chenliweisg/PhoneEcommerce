@@ -7,7 +7,7 @@ use `git status` to list all new or modified files that haven't yet been committ
 
 click here to view the prototype <u>link here</u>
 
-# Features
+## Features
 - [ ] Feature 1 - scroll back to top button
 - [ ] Feature 2 - Social media icon will disappear when scrolled to the bottom of the page. (https://www.mockplus.com/blog/post/interactive-website-example)
 - [ ] Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, snake & ladder, guess the song name )
@@ -22,7 +22,7 @@ click here to view the prototype <u>link here</u>
 - [ ] Feature 12 - change username & password & set profile image
 - [ ] Feature 13 - top up user balance
 
-# Technology used
+## Technology used
 <ul>
   <li>HTML (Structure of website)</li>
   <li>Css (beautiful the website)</li>
@@ -30,13 +30,13 @@ click here to view the prototype <u>link here</u>
   <li>Adobe XD (website layout idea )</li>
 </ul>
 
-# Testing
+## Testing
 <h3>Testing 1:</h3>
 <ol>
 <li></li>
 </ol>
 
-# Credits
+## Credits
 <h3>Content</h3>
 <h3>Media</h3>
 <ul>
