@@ -31,19 +31,11 @@ click here to view the prototype <u>link here</u>
 </ul>
 
 ## Testing
-<h3>Testing 1:</h3>
-<ol>
-<li></li>
-</ol>
+
+
 
 ## Credits
-<h3>Content</h3>
-<h3>Media</h3>
-<ul>
-<li></li>
-</ul>
+### Content
+### Media
+### Acknowledgements
 
-<h3>Acknowledgements</h3>
-<ul>
-  <li></li>
-</ul>
