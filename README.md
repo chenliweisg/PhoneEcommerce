@@ -3,6 +3,9 @@ This website will sell a variety of phones. Customers can compare the phones and
 
 ## Design Process
 
+* As a customer, I want to view all types of phone products, so that I can compare their price and decide which to buy.
+* As a customer, I want to be able to add my product into carts, so I can check out later.
+* As a customer, I want to play games for reward, 
 
 click here to view the prototype <u>link here</u>
 
