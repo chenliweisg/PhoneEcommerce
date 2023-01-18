@@ -1,11 +1,20 @@
-# T07 Phone
+# T07 Phone :iphone:
 This website will sell a variety of phones. Customers can compare the phones and decide what is the best for them. They can also login and play reward games for coupons. The objective of this website is to attract customers to buy phones from us.
 
-## Design Process
+## Design Process 
 
-* As a customer, I want to view all types of phone products, so that I can compare their price and decide which to buy.
-* As a customer, I want to be able to add my product into carts, so I can check out later.
-* As a customer, I want to play games for reward, 
+### As a customer
+* I want to view all types of phone products, so that I can compare their price and decide which to buy.
+* I want to filter the price range, so I know whats available for my budget.
+* I want to add my product into cart so I save my items while continue shopping .
+* I want to remove some/all product in the cart so that i do not check out with unwanted product.
+* I want to enter my card information so I can purchase my item.
+* I want to view the total price of all my items in cart, so i will know how much i will be paying.
+* I want to add/reduce the quantity of a item, so i can determine how many i want to buy.
+* I want to enter the location of my address so my item will deliver to my house.
+* I want to see my transaction history, so i can know how much i have spend in the past.
+* I want to change the password for my account so it's easiler for me to remember.
+
 
 click here to view the prototype <u>link here</u>
 
