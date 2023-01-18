@@ -1,5 +1,5 @@
 # T07 Phone
-
+This website will sell a variety of phones. Customers can compare the phones and decide what is the best for them. They can also login and play reward games for coupons. The objective of this website is to attract customers to buy phones from us.
 
 ## Design Process
 
