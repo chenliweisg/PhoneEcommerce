@@ -9,7 +9,7 @@ click here to view the prototype <u>link here</u>
 
 # Features
 <h3>Features</h3>
-- [x] Feature 1 - scroll back to top button
+- [x] #Feature 1 - scroll back to top button
 <ul>
   -[] Feature 1 - scroll back to top button
   <li>Feature 2 - Social media icon will disappear when scrolled to the bottom of the page. (https://www.mockplus.com/blog/post/interactive-website-example)</li>
