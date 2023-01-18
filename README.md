@@ -10,7 +10,7 @@ click here to view the prototype <u>link here</u>
 # Features
 <h3>Features</h3>
 <ul>
-  <li>Feature 1 - scroll back to top button</li>
+  -[]Feature 1 - scroll back to top button
   <li>Feature 2 - Social media icon will disappear when scrolled to the bottom of the page. (https://www.mockplus.com/blog/post/interactive-website-example)</li>
   <li>Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, snake & ladder, guess the song name )</li>
   <li>Feature 4 - Product recommendation.</li>
