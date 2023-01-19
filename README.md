@@ -1,4 +1,4 @@
-# T07 Phone :iphone:
+# xPhone :iphone:
 This website will sell a variety of phones. Customers can compare the phones and decide what is the best for them. They can also login and play reward games for coupons. The objective of this website is to attract customers to buy phones from us.
 
 ## Design Process 
@@ -15,7 +15,6 @@ This website will sell a variety of phones. Customers can compare the phones and
 * I want to see my transaction history, so i can know how much i have spend in the past.
 * I want to change the password for my account so it's easiler for me to remember.
 
-
 click here to view the prototype <u>link here</u>
 
 ## Features
@@ -29,8 +28,8 @@ click here to view the prototype <u>link here</u>
 - [ ] Feature 6 - Search for product
 - [ ] Feature 7 - left and right button to view more products (https://blog.hubspot.com/website/interactive-websites)
 - [ ] Feature 8 - video, image, sound
-- [ ] Feature 9 - Map?
-- [ ] Feature 10 - Rating?
+- [ ] Feature 9 - Map
+- [ ] Feature 10 - Rating
 - [ ] Feature 11 - Greet username
 - [ ] Feature 12 - change username & password & set profile image
 - [ ] Feature 13 - top up user balance
