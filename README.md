@@ -15,7 +15,7 @@ This website will sell a variety of phones. Customers can compare the phones and
 * I want to see my transaction history, so i can know how much i have spend in the past.
 * I want to change the password for my account so it's easiler for me to remember.
 
-click here to view the prototype <u>link here</u>
+click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf-a5dc-ad50f5833191-a385/</u>
 
 ## Features
 ### Existing features
