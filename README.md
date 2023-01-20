@@ -22,7 +22,7 @@ click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf
 ### Features Left to Implement
 * Feature 1 - scroll back to top button
 * Feature 2 - Social media icon will disappear when scrolled to the bottom of the page. (https://www.mockplus.com/blog/post/interactive-website-example)
-* Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, snake & ladder, guess the song name )
+* Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, timer game, calculation game)
 * Feature 4 - Product recommendation.
 * Feature 5 - Daily login reward
 * Feature 6 - Search for product
@@ -35,6 +35,7 @@ click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf
 * Feature 13 - top up user balance
 * Feature 14 - filter category
 * Feature 15 - Add/remove quantity
+* Feature 16 - product promotion for 24 hour
 
 ## Technology used
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
