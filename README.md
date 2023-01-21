@@ -30,7 +30,7 @@ click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf
 * Feature 8 - video, image, sound
 * Feature 9 - Map
 * Feature 10 - Rating
-* Feature 11 - Greet username
+* Feature 11 - breadcrumbs
 * Feature 12 - change username & password & set profile image
 * Feature 13 - top up user balance
 * Feature 14 - filter category
