@@ -68,5 +68,3 @@ In this section, you should mention all of the languages, frameworks, libraries,
 ### Acknowledgements
 
 - I received inspiration for this project from X
-
-ID is the best man maybe? Testing 123
