@@ -56,6 +56,6 @@ In this section, you should mention all of the languages, frameworks, libraries,
 ### Media
 * The photos used in this site were obtained from ...
 ### Acknowledgements
-* I received inspiration for this project from X
+* I received inspiration for this project from X      I receive inspiration from Mr Low 
 
 ID is the best man
