@@ -1,0 +1,146 @@
+body
+{
+    background-color: white;
+}
+
+/*remove container's left & right padding*/
+.container-xl
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*Space between every section*/
+header{
+    padding: 100px 15px;
+}
+
+section
+{
+    padding: 0px 15px;
+    padding-top: 100px;
+}
+
+/*---Header---*/
+header
+{
+    background-image: url("https://i.pinimg.com/originals/c5/b8/f2/c5b8f2fb9d1cee516d5e3d1dd56ab5af.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*---Category---*/
+.phone h3
+{
+    text-align: center;
+    background-image: url("https://media.wired.com/photos/62d75d34ddaaa99a1df8e61d/master/pass/Phone-Camera-Webcam-Gear-GettyImages-1241495650.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0px;
+    border-radius: 15px;
+    transition-duration: 0.5s;
+}
+
+.phone h3:hover
+{
+    cursor: pointer;
+    color: white;
+    background-image: url("https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+}
+
+.accs h3
+{
+    text-align: center;
+    background-image: url("https://www.rd.com/wp-content/uploads/2017/08/Untitled-4phoneaccessories.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0px;
+    border-radius: 15px;
+    transition-duration: 0.5s;
+}
+
+.accs h3:hover
+{
+    cursor: pointer;
+    color: white;
+    background-image: url("https://images.pexels.com/photos/3780680/pexels-photo-3780680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.card{
+    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.card img
+{
+    height: 350px;
+    object-fit: contain;
+    border-radius: 15px;
+    background-color: #EBEFF1 ;
+}
+
+/*Offer*/
+.offer
+{
+    background-color: aquamarine;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.offer .prod img{
+    width: 350px;
+}
+
+.offer .prod-img
+{
+    background-color: #F8F9F9;
+    border-radius: 15px;
+}
+
+.offer .prod-info
+{
+    margin: 40px;
+}
+
+.offer .container
+{
+    background-color: black;
+    margin: 2%;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+@media (min-width: 1200px) {
+    .container-xl{
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .offer .d-lg-flex{
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .offer .container
+    {
+        padding: 40px 0px;
+        margin: 40px 0px;
+    }
+}
+
+.owl-nav {
+    font-size: 52px;
+    padding: 0;
+  }
