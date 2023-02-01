@@ -90,18 +90,20 @@ header
 .offer
 {
     background-color: aquamarine;
-    padding: 25px;
+    padding: 2% 1%;
     border-radius: 15px;
-}
-
-.offer .prod img{
-    width: 350px;
 }
 
 .offer .prod-img
 {
     background-color: #F8F9F9;
     border-radius: 15px;
+    text-align: center;
+}
+
+.offer img
+{
+    width: 350px;
 }
 
 .offer .prod-info
@@ -109,7 +111,12 @@ header
     margin: 40px;
 }
 
-.offer .container
+.offer .prod-info .prod-name, .offer .prod-info .review ,.offer .prod-info h5, .offer .prod-info button
+{
+    padding: 5px;
+}
+
+.offer .offer-time .container
 {
     background-color: black;
     margin: 2%;
@@ -144,3 +151,4 @@ header
     font-size: 52px;
     padding: 0;
   }
+
