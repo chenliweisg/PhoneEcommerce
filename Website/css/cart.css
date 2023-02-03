@@ -1,0 +1,80 @@
+/*---page layout configuration---*/
+/*remove container's left & right padding*/
+.container-xl
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*Space between every section*/
+header{
+    padding: 100px 15px;
+}
+
+section
+{
+    padding: 0px 15px;
+    padding-top: 100px;
+}
+
+/*---Cart---*/
+.card
+{
+    border-radius: 10px;
+}
+
+/*cart-items*/
+.cart-items .hr
+{
+    margin: 0;
+}
+
+.cart-items img
+{
+    background-color: #EAEDED;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.item
+{
+    padding: 2rem;
+}
+
+.item input
+{
+    text-align: center;
+    width: 50px;
+    border-radius: 0px;
+}
+
+.item input::-webkit-outer-spin-button, .item input::-webkit-inner-spin-button 
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.prod-qty .minus-btn
+{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    background-color: #EC7063 ;
+    margin-right: 0px;
+}
+.prod-qty .plus-btn
+{
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    background-color: #5499C7;
+    margin-right: 0px;
+}
+
+/*Summary*/
+.discount
+{
+    /*display: none !important;*/
+}
