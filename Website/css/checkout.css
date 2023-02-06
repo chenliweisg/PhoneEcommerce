@@ -1,35 +1,91 @@
 /*---page layout configuration---*/
-/*remove container's left & right padding*/
-.container-xl
-{
-    padding-left: 0;
-    padding-right: 0;
+main{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h5{
+    margin: 15px 0px;
 }
 
 /*Space between every section*/
-header{
-    padding: 100px 15px;
+section{
+    margin-bottom: 50px;
 }
 
-section
-{
-    padding: 0px 15px;
-    padding-top: 50px;
+/*Delivery-info*/
+.delivery-info .card{
+    background-color: #F8F9F9;
+    border: none;
 }
-/*card detail*/
-.online-payment input::-webkit-outer-spin-button, .online-payment input::-webkit-inner-spin-button 
-{
+
+/*payment-info*/
+.payment-info .card{
+    background-color: #F8F9F9;
+    border: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
+.select-payment i{
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
 /*Summary*/
-.discount
-{
+.summary .card{
+    background-color: #F8F9F9;
+    border: none;
+}
+
+.discount{
     /*display: none !important;*/
 }
 
-.item .card
-{
+.item .card{
     border: none;
+}
+
+.cart{
+   overflow-y: scroll;
+   height: 183px;
+}
+
+.cart .prod-qty{
+    text-align: right;
+}
+
+.cart h6{
+    font-size: small;
+}
+
+.cart .item{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+@media (max-width: 992px) {
+    .cart .prod-img img{
+        width: 120px;
+    }
+}
+
+@media (max-width: 767px) {  
+    main{
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    section{
+        margin-bottom: 25px;
+    }
+
+     /*Cart*/
+     .cart .item{
+        margin-bottom: 25px;
+    }
 }

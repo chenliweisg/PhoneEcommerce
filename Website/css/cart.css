@@ -10,7 +10,7 @@
 section
 {
     padding: 0px 15px;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 /*---Cart---*/
@@ -64,10 +64,16 @@ section
     margin-right: 0px;
 }
 
+/*Summary*/
+.summary .card-body a
+{
+    text-decoration: none;
+}
+
 /*Upsales*/
 section .upsales
 {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .upsales .card

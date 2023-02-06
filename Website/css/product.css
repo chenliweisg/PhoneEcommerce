@@ -1,102 +1,84 @@
-/*.dropdown-toggle::after {
-    display:none;
-}*/
-/*---Header---*/
-header{
-    padding: 100px 15px;
-    min-height: 400px;
-}
-
-section
+/*remove container's left & right padding*/
+.container-xl
 {
-    padding: 100px 15px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-header
+/*Space between main*/
+main
 {
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    animation: change 7s ease-in-out infinite;
-    position: relative;
-    background-size: 400% 400%;
-    height:100%;
+    padding: 50px 0px;
 }
 
-header h3,header .row{
-    margin: 30px 0px;
-}
-
-
-/*---Filter Product---*/
-.filter
+/*prod-img*/
+.prod-img
 {
-    background-color: #D6EAF8;
-    border-radius: 10px;
-    margin: 0px 0px;
-    margin-bottom: 25px;
+
 }
 
-.btn-group
+.main-img
 {
-    padding: 0;
+    text-align: center;
 }
 
-/*Filter button*/
-.filter button
+.main-img img
 {
-    font-size: large;
+    width: 400px;
 }
 
-.filter button:hover
+
+.sub-img
 {
-    color: white;
+    justify-content: center;
+}
+
+.sub-img img
+{
+    width: 100px;
+}
+
+
+/*prod-info*/
+.prod-name,.prod-price,.prod-review,.prod-info .btn,#prod-desc
+{
+    margin: 25px 0px;
+}
+
+/*prod-price*/
+.prod-price h3
+{
+    font-weight: 400;
+}
+
+/*prod-review*/
+.prod-review i
+{
+    color: orange;
+}
+
+/*cart-btn*/
+.btn-primary:hover
+{
     background-color: black;
+    border-color: black;
 }
 
-.filter button:focus 
+/*prod-desc*/
+.prod-desc
+{
+    border-top: 1px solid #D5DBDB;  
+    border-bottom: 1px solid #D5DBDB; 
+}
+.prod-desc button
+{
+    color: black;
+    padding-left: 0px;
+    padding-right: 0px;
+    justify-content: space-between;
+}
+
+.prod-desc button:focus
 {
     box-shadow: none;
-}
-
-
-/*---Products---*/
-section h3{
-    margin-bottom: 25px;
-}
-
-.card{
-    border: none;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.card img
-{
-    height: 350px;
-    object-fit: contain;
-    border-radius: 15px;
-    background-color: #EBEFF1 ;
-}
-
-/*Owl carousel*/
-.owl-nav {
-    font-size: 30px;
-    padding: 0px;
-  }
-
-  .owl-theme .owl-nav [class*=owl-] 
-  {
-    width: 30px;
-  }
-  
-
-
-@media (max-width: 992px) {
-
-}
-
-@media (max-width: 575px) {
-    .listing .row
-    {       
-        margin-bottom: 40px;
-    }
 }

@@ -28,104 +28,153 @@
     <nav class="bg-dark">
     </nav>
 
-    <!--delivery information-->
-    <section>
-      <div class="delivery container-xl">
+    <main>
+      <div class="container-xl">
         <div class="row">
-          <div class="delivery-info col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0">Delivery information</h5>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="name row">
-                      <div class="form-group col-lg-6">
-                        <label class="form-label" for="firstname">First name</label>
-                        <input type="text" id="firstname" class="form-control" />
+          
+          <!--delivery information-->
+          <div class="col-lg-8">
+            <section class="delivery-info">
+              <h5>Delivery information</h5>
+              <div class="card">
+                  <div class="card-body">
+                    <form>
+                      <div class="name row">
+                        <div class="form-group col-lg-6">
+                          <label class="form-label" for="firstname">First name</label>
+                          <input type="text" id="firstname" class="form-control" placeholder="John"/>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label class="form-label" for="lastname">Last name</label>
+                          <input type="text" id="lastname" class="form-control" placeholder="Doe"/>
+                        </div>
                       </div>
-                      <div class="form-group col-lg-6">
-                        <label class="form-label" for="lastname">Last name</label>
-                        <input type="text" id="lastname" class="form-control" />
+                      <div class="contact row">
+                        <div class="form-group col-lg-6">
+                          <label class="form-label" for="phone-no">Contact Number</label>
+                          <input type="number" id="phone-no" class="form-control" placeholder="91234567"/>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label class="form-label" for="email">Email</label>
+                          <input type="email" id="email" class="form-control" placeholder="john@gmail.com"/>
+                        </div>
                       </div>
+                      <div class="address row">
+                        <div class="form-group col-lg-12">
+                          <label class="form-label" for="address">Address</label>
+                          <input type="text" id="address" class="form-control" placeholder="535 Clementi Rd, Singapore 599489"/>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+              </div>
+            </section>
+   
+            <!--Payment method-->
+            <section class="payment-info">
+              <h5>Payment method</h5>
+              <div class="card">
+                  <div class="card-body">
+                    <div class="select-payment">
+                      <div class="form-check form-check-inline mr-md-5">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="online-payment" value="option1" checked>
+                        <label class="form-check-label" for="online-payment"><i class="fa-regular fa-credit-card"></i>Online payment</label>
+                      </div>
+                      <div class="form-check form-check-inline ml-md-5">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cash-payment" value="option2">
+                        <label class="form-check-label" for="cash-payment"><i class="fa-regular fa-money-bill-1"></i>Cash on delivery</label>
+                      </div> 
                     </div>
-                    <div class="contact row">
-                      <div class="form-group col-lg-6">
-                        <label class="form-label" for="phone-no">Contact Number</label>
-                        <input type="number" id="phone-no" class="form-control" />
-                      </div>
-                      <div class="form-group col-lg-6">
-                        <label class="form-label" for="email">Email</label>
-                        <input type="email" id="email" class="form-control" />
-                      </div>
-                    </div>
-                    <div class="address row">
-                      <div class="form-group col-lg-12">
-                        <label class="form-label" for="address">Address</label>
-                        <input type="text" id="address" class="form-control" />
-                      </div>
-                    </div>
-                  </form>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!--Payment method-->
-    <section>
-      <div class="delivery container-xl">
-        <div class="row">
-          <div class="delivery-info col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0">Payment method</h5>
-                </div>
-                <div class="card-body">
-                  <div class="select-payment">
-                    <div class="form-check form-check-inline mr-md-5">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="online-payment" value="option1" checked>
-                      <label class="form-check-label" for="online-payment">Online payment</label>
+                    <form class="online-payment collapse show">
+                      <hr class="hr"/>
+                      <div class="card-num">
+                        <div class="form-group">
+                          <label class="form-label" for="card-num">Card number</label>
+                          <input type="number" id="card-num" class="form-control" placeholder="Enter your card number"/>
+                        </div>
+                      </div>
+                      <div class="card-name">
+                        <div class="form-group">
+                          <label class="form-label" for="card-name">Name on card</label>
+                          <input type="name" id="card-name" class="form-control" placeholder="Enter the name in the card"/>
+                        </div>
+                      </div>
+                      <div class="card-security row">
+                        <div class="form-group col-lg-6">
+                          <label class="form-label" for="card-exp">Expiry date</label>
+                          <input type="date" id="card-exp" class="form-control"/>
+                        </div>
+                        <div class="form-group col-lg-6">
+                          <label class="form-label" for="card-cvv">CVV</label>
+                          <input type="number" id="card-cvv" class="form-control" placeholder="3 digit number"/>
+                        </div>
+                      </div>
+                    </form> 
+
+                  </div>
+              </div>
+            </section>
+          </div>
+
+          <!--Cart details-->
+          <div class="col-lg-4">
+            <section class="summary">
+              <h5>Cart Summary</h5>
+              <div class="card">
+                  <div class="card-body">
+                    <div class="cart">
+                      <div class="item row d-flex justify-content-between align-items-center">
+                        <div class="prod-img col-3">
+                          <img src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="prod-desc col-6">
+                          <h6>IphoneX</h6>
+                          <h6>Black color 256Gb</h6>
+                          <h6>$999.99</h6>
+                        </div>
+                        <div class="prod-qty col-3">
+                          <h6>x1</h6>
+                        </div>
+                      </div>
+                      <div class="item row d-flex justify-content-between align-items-center">
+                        <div class="prod-img col-3">
+                          <img src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="prod-desc col-6">
+                          <h6>IphoneX</h6>
+                          <h6>Black color 256Gb</h6>
+                          <h6>$999.99</h6>
+                        </div>
+                        <div class="prod-qty col-3">
+                          <h6>x1</h6>
+                        </div>
+                      </div>
                     </div>
-                    <div class="form-check form-check-inline ml-md-5">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="cash-payment" value="option2">
-                      <label class="form-check-label" for="cash-payment">Cash on delivery</label>
-                    </div> 
-                  </div>    
-                  
-                  <form class="online-payment">
                     <hr class="hr"/>
-                    <div class="card-num">
-                      <div class="form-group">
-                        <label class="form-label" for="card-num">Card number</label>
-                        <input type="number" id="card-num" class="form-control" placeholder="Enter your card number"/>
+                      <div class="subtotal d-flex justify-content-between">
+                          <p>Subtotal</p>
+                          <h6>$2199.00</h6>
                       </div>
-                    </div>
-                    <div class="card-name">
-                      <div class="form-group">
-                        <label class="form-label" for="card-name">Name on card</label>
-                        <input type="name" id="card-name" class="form-control" placeholder="Enter the name in the card"/>
+                      <div class="discount d-flex justify-content-between">
+                          <p class="mb-0">Discount</p>
+                          <h6 style="color: green;">-$219.00</h6>
                       </div>
-                    </div>
-                    <div class="card-security row">
-                      <div class="form-group col-lg-6">
-                        <label class="form-label" for="card-exp">Expiry date</label>
-                        <input type="date" id="card-exp" class="form-control"/>
+                      <hr class="hr"/>
+                      <div class="totalAmt d-flex justify-content-between">
+                          <h6>Total Amount</h6>
+                          <h6>$2000.00</h6>
                       </div>
-                      <div class="form-group col-lg-6">
-                        <label class="form-label" for="card-cvv">CVV</label>
-                        <input type="number" id="card-cvv" class="form-control" placeholder="3 digit number"/>
-                      </div>
-                    </div>
-                  </form>
-
-                </div>
-            </div>
+                      <a href="#"><button class="btn btn-primary btn-lg btn-block mt-4" type="button">Place Order</button></a>
+                  </div>
+              </div>
+            </section>
           </div>
+
+
         </div>
-      </div>
-    </section>
+      </div>     
+    </main>
 
     <!--footer-->
     <footer>

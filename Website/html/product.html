@@ -14,267 +14,70 @@
     <!--Owl Carousel theme min.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     
     <!--CSS-->
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/footer.css">
 
-    <title>Homepage EcommercePhone</title>
+    <title>Homepage</title>
   </head>
   <body>
 
     <!--Navbar-->
-    <nav class="bg-dark">      
+    <nav class="bg-dark">
     </nav>
-    
-    <!--Header-->
-    <header>
+
+    <!--Product-->
+    <main>
         <div class="container-xl">
-        <h3 class="text-center">What are you looking for?</h3>
-          <div class="row input-group">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-            <button type="button" class="btn btn-outline-primary">search</button>
-          </div>
+            <div class="row">
+                <div class="prod-img col-md-7">
+                    <div class="main-img">
+                        <img class="img-fluid" src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png">
+                    </div>
+                    <div class="sub-img d-flex">
+                        <img class="img-fluid" src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png">
+                        <img class="img-fluid" src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png">
+                        <img class="img-fluid" src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png">
+                    </div>
+                </div>
+
+                <div class="prod-info col-md-5">
+                    <div class="prod-name">
+                        <h1>iPhone 14 Plus Silicone Case with MagSafe - Lilac</h1>
+                    </div>
+                    <div class="prod-price">
+                        <h3>$999.00</h3>
+                    </div>
+                    <div class="prod-review">
+                        <p class="review">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            4.5
+                        </p>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block">Add to cart</button>                 
+                    <div class="prod-desc">
+                        <button class="btn btn-block d-flex" data-toggle="collapse" data-target="#prod-desc" aria-expanded="true">
+                            <h5>Product description</h5><i class="fas fa-plus"></i>
+                        </button>
+                        <div id="prod-desc" class="collapse">                           
+                            With the Belkin Secure Holders with Key Ring for AirTag, you can track your belongings effortlessly. Its innovative Twist-and-Lock design keeps your AirTag safely inside, and raised edges help protect against scratches. Choose from four new colours that perfectly complement your AirTag while keeping its elegant design on full display
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </main>
 
-    <!--Products-->
-    <section>
-        <div class="listing container-xl">
-
-             <!--Filter Product-->
-            <div class="filter row">
-                <div class="btn-group col-md-4">
-                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Price
-                    </button>
-                    <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">$1-100</a>
-                    <a class="dropdown-item" href="#">$101-500</a>
-                    <a class="dropdown-item" href="#">$501-$1000</a>
-                    <a class="dropdown-item" href="#">$1001-$2000</a>
-                    </div>
-                </div>
-                <div class="btn-group col-md-4">
-                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Brand
-                    </button>
-                    <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Apple</a>
-                    <a class="dropdown-item" href="#">Samsung</a>
-                    <a class="dropdown-item" href="#">LG</a>
-                    <a class="dropdown-item" href="#">Oppo</a>
-                    </div>
-                </div>
-                <div class="btn-group col-md-4">
-                    <button type="button" class="btn ">Reset Filters</button>
-                </div>
-              </div>
-
-          <h3>Popular Products</h3>
-          <div class="row">
-            <div class="owl-carousel owl-theme">
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://pngimg.com/uploads/iphone_13/iphone_13_PNG27.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://www.pngkey.com/png/full/509-5095670_vegerpower-alloy-portable-battery-charger-10000mah-transparent-portable.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://images.samsung.com/is/image/samsung/p6pim/sg/ep-p5400tbeggb/gallery/sg-ep-p5400-ep-p5400tbeggb-531225977?$650_519_PNG$"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://cdn.shopify.com/s/files/1/0372/9188/4679/products/nativeunion-clic-classic-magsafe-compatible-iphone-black_2_600x.png?v=1645445762"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-          </div>
-          </div>
-
-          <h3>Popular Products</h3>
-          <div class="row">
-            <div class="owl-carousel owl-theme">
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://pngimg.com/uploads/iphone_13/iphone_13_PNG27.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://www.pngkey.com/png/full/509-5095670_vegerpower-alloy-portable-battery-charger-10000mah-transparent-portable.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://images.samsung.com/is/image/samsung/p6pim/sg/ep-p5400tbeggb/gallery/sg-ep-p5400-ep-p5400tbeggb-531225977?$650_519_PNG$"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://cdn.shopify.com/s/files/1/0372/9188/4679/products/nativeunion-clic-classic-magsafe-compatible-iphone-black_2_600x.png?v=1645445762"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-          </div>
-          </div>
-
-          <h3>Popular Products</h3>
-          <div class="row">
-            <div class="owl-carousel owl-theme">
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://pngimg.com/uploads/iphone_13/iphone_13_PNG27.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://www.pngkey.com/png/full/509-5095670_vegerpower-alloy-portable-battery-charger-10000mah-transparent-portable.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://images.samsung.com/is/image/samsung/p6pim/sg/ep-p5400tbeggb/gallery/sg-ep-p5400-ep-p5400tbeggb-531225977?$650_519_PNG$"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-              <div class="item">
-                <div class="card text-black text-center">
-                  <img src="https://cdn.shopify.com/s/files/1/0372/9188/4679/products/nativeunion-clic-classic-magsafe-compatible-iphone-black_2_600x.png?v=1645445762"
-                    class="card-img-top"/>
-                  <div class="card-body">
-                        <h5 class="product-name">Iphone 13</h5>
-                        <h5 class="product-price">$5,999</h5>
-                      <p class="review"><i class="fa fa-star"></i>4.5</p>
-                      <button type="button" class="btn btn-primary">Add to cart</button>
-                  </div>
-                </div>
-              </div> 
-          </div>
-          </div>
-
-        </div> 
-      </section>
 
     <!--footer-->
     <footer>
+
     </footer>
 
 
@@ -292,10 +95,5 @@
     <script src="../js/product.js"></script>
     <script src="../js/owl-carousel.js"></script>
 
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
