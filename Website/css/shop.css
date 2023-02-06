@@ -1,0 +1,102 @@
+/*.dropdown-toggle::after {
+    display:none;
+}*/
+/*---Header---*/
+header{
+    padding: 100px 15px;
+    min-height: 400px;
+}
+
+section
+{
+    padding: 100px 15px;
+}
+
+header
+{
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    animation: change 7s ease-in-out infinite;
+    position: relative;
+    background-size: 400% 400%;
+    height:100%;
+}
+
+header h3,header .row{
+    margin: 30px 0px;
+}
+
+
+/*---Filter Product---*/
+.filter
+{
+    background-color: #D6EAF8;
+    border-radius: 10px;
+    margin: 0px 0px;
+    margin-bottom: 25px;
+}
+
+.btn-group
+{
+    padding: 0;
+}
+
+/*Filter button*/
+.filter button
+{
+    font-size: large;
+}
+
+.filter button:hover
+{
+    color: white;
+    background-color: black;
+}
+
+.filter button:focus 
+{
+    box-shadow: none;
+}
+
+
+/*---Products---*/
+section h3{
+    margin-bottom: 25px;
+}
+
+.card{
+    border: none;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.card img
+{
+    height: 350px;
+    object-fit: contain;
+    border-radius: 15px;
+    background-color: #EBEFF1 ;
+}
+
+/*Owl carousel*/
+.owl-nav {
+    font-size: 30px;
+    padding: 0px;
+  }
+
+  .owl-theme .owl-nav [class*=owl-] 
+  {
+    width: 30px;
+  }
+  
+
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 575px) {
+    .listing .row
+    {       
+        margin-bottom: 40px;
+    }
+}
