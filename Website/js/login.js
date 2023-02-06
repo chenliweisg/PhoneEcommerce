@@ -51,7 +51,7 @@ submit.onclick = function(e){
         
         for (i=0; i<response.length; i++){
             if (signinEmail.value === response[i].Email && signinPassword.value === response[i].Password) {
-                console.log("ure gay");
+                localStorage.setItem("name", response[i].Name);
                 location.href = '../html/home.html';
             }
             else{}
