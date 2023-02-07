@@ -30,4 +30,24 @@ $(document).ready(function() {
         unhideOnlinePayment(event)
     });
 
+   
 });
+
+var anime = bodymovin.loadAnimation({
+
+    container: document.getElementById('confetti'), 
+    path: 'https://assets2.lottiefiles.com/packages/lf20_eiyorylp.json', 
+    renderer: 'svg',
+    loop: false, 
+    autoplay: false, 
+    name: "Demo Animation", 
+ });
+ anime.setSpeed(0.4);
+    $("#placeOrder").on("click",function(event){
+        $('.confetti').removeClass('hide')
+        anime.goToAndPlay(0,true);
+    });
+
+    anime.addEventListener('complete', () => {
+        $('.confetti').addClass('hide')       
+    })

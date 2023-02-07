@@ -89,3 +89,15 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
         margin-bottom: 25px;
     }
 }
+
+/*Lottie*/
+#confetti{
+    width: 200px;
+    position: absolute;
+    pointer-events: none;
+    margin-left: 55px;
+}
+
+.hide {
+    display: none;
+}
