@@ -9,8 +9,9 @@ $(document).ready(function() {
     
     });
 
-const productCardTemplate = document.querySelector("[data-product-template]");
-const productCardContainer = document.querySelector("[data-products-container]");
+const searchInput = document.getElementById("search-bar");
+let accessories = [];
+let phones = [];
 
 var settings = {
     "async": true,
@@ -34,9 +35,12 @@ var settings = {
       let pricediv = document.createElement("div");
       let imagediv = document.createElement("img");
       
+      let pname = response[i].Name;
+      let pprice = response[i].Price;
+
       imagediv.setAttribute("src", response[i].Image);
-      namediv.textContent = response[i].Name;
-      pricediv.textContent = response[i].Price;
+      namediv.textContent = pname;
+      pricediv.textContent = "$" + pprice;
 
       namediv.classList.add("name");
       pricediv.classList.add("price");
@@ -47,5 +51,27 @@ var settings = {
 
       container.id = response[i]._id;
       root.appendChild(container);
+
+      const productObject = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand};
+      products.push(productObject);
     }
   });
+
+searchInput.addEventListener("input", (e) => {
+  const input = e.target.value.toLowerCase();
+  console.log(input);
+  products.forEach(product => {
+    const productdiv = document.getElementById(product.id);
+    if (!product.name.includes(input)){
+      productdiv.style.display = "none";
+    }
+    else if (input.length === 0){
+      productdiv.style.display = "block";
+      console.log("nth if")
+    }
+    else if (product.name.includes(input)){
+      productdiv.style.display = "block";
+    }
+  })
+  
+})
