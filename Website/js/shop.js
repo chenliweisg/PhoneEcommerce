@@ -35,7 +35,7 @@ var settings = {
       let container = document.createElement("div");
       let namediv = document.createElement("div");
       let pricediv = document.createElement("div");
-      let reviewdiv = document.createElement("div");
+      let reviewdiv = document.createElement("p");
       let imagediv = document.createElement("img");
       let containImg = document.createElement("div")/*Liwei */
       
@@ -46,7 +46,7 @@ var settings = {
       imagediv.setAttribute("src", response[i].Image);
       namediv.textContent = pname;
       pricediv.textContent = "$" + pprice;
-      reviewdiv.textContent = preview;
+      reviewdiv.innerHTML = `<i class="fa fa-star text-warning"></i>` + preview;
 
       namediv.classList.add("name");
       pricediv.classList.add("price");
