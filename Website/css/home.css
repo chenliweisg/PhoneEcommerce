@@ -1,8 +1,3 @@
-body
-{
-    background-color: white;
-}
-
 /*remove container's left & right padding*/
 .container-xl
 {
@@ -30,6 +25,9 @@ header
 }
 
 /*---Category---*/
+.category{
+    background-color: ;
+}
 .phone h3
 {
     text-align: center;
@@ -70,8 +68,6 @@ header
     background-position: center;
 }
 
-
-
 .card{
     border: none;
     margin-left: 15px;
@@ -86,45 +82,83 @@ header
     background-color: #EBEFF1 ;
 }
 
+/*Product*/
+.product{
+    background-color: none;
+}
+
+
 /*Offer*/
-.offer
+.offer{
+    padding-bottom: 100px;
+    /*background-image: url("https://cdn.macstories.net/icons1529553323730-1637678091349.png");*/
+    background-image: url("https://wallpaperaccess.com/full/5117562.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.offer .container-xl
 {
-    background-color: aquamarine;
-    padding: 2% 1%;
+    background-color: #EAF2F8;
+    padding-left: 25px;
+    padding-right: 25px;
     border-radius: 15px;
 }
 
-.offer .prod-img
+/*offer-prod*/
+.offer-prod-img img{
+    max-width: 250px;
+}
+
+.offer-prod-info{
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 20px 20px;
+}
+
+.offer-prod-info h5
 {
-    background-color: #F8F9F9;
-    border-radius: 15px;
+    font-weight: 400;
+}
+
+.offer-prod-info p {
+    margin-bottom: 40px;
+}
+
+.offer-prod-info p i{
+    color: orange;
+}
+
+/*offer-timing*/
+.offer-timing
+{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.timer .col-md-4 
+{
     text-align: center;
 }
 
-.offer img
+.timer .col-md-4 p
 {
-    width: 350px;
-}
-
-.offer .prod-info
-{
-    margin: 40px;
-}
-
-.offer .prod-info .prod-name, .offer .prod-info .review ,.offer .prod-info h5, .offer .prod-info button
-{
-    padding: 5px;
-}
-
-.offer .offer-time .container
-{
-    background-color: black;
-    margin: 2%;
-    padding: 20px;
+    background-color:#1C2833 ;
+    border-radius: 10px;
+    font-size: xx-large;
+    font-weight: 800;
+    padding: 15%;
     color: white;
-    border-radius: 15px;
-    text-align: center;
 }
+.timer .col-md-4 span{
+    font-weight: 600;
+    font-size: large;
+}
+
+.timer{
+    margin-top: 25px;
+}
+
 
 
 @media (min-width: 1200px) {
@@ -134,16 +168,59 @@ header
 }
 
 @media (max-width: 992px) {
-    .offer .d-lg-flex{
+    /*offer-prod*/
+    .offer-prod{
+        justify-content: space-evenly;
+    }
+    
+    /*offer-timing*/
+    .offer-timing{
+        margin-top: 5%;
+    }
+
+    .offer-timing h5{
         text-align: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-size: x-large;
+    }
+
+    .offer .container-xl{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .timer .col-md-4 p
+    {
+        margin-left:15%;
+        margin-right:15%;
+        padding: 10%;
+    }
+
+    .timer span{
+        font-size: x-large;
     }
 }
 
-@media (max-width: 575px) {
-    .offer .container
-    {
-        padding: 40px 0px;
-        margin: 40px 0px;
+@media (max-width: 767px) {
+    /*offer-prod*/
+    .offer-prod{
+        text-align: center;
+    }
+
+    .offer-prod .btn{
+        width: 100%;
+    }
+
+    /*offer-timing*/
+    .timer .col-md-4{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .offer-timing h5{
+        margin-top: 15%;
+        margin-bottom: 5%;
     }
 }
 
@@ -152,3 +229,12 @@ header
     padding: 0;
   }
 
+  .offer{
+          /*Google fonts*/
+          font-family: 'Mitr', sans-serif;
+  }
+
+body{
+      /*Google fonts*/
+      font-family: 'Quantico', sans-serif;
+}
