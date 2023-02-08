@@ -26,20 +26,32 @@ header h3,header .row{
 }
 
 /*---Products---*/
-#products{
-    display: flex;
-    background-color: #23A6D5;
-    flex-direction: column;
-    flex-wrap: wrap;
+#products .col-md-4{
+    margin: 20px 0px;
+    padding: 0px 20px;
+}
+
+#products div
+{
+    text-align: center;
 }
 
 #products img{
-    width: 100px;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 15px;
 }
 
-#products div{
-    display: inline-block;
+#products .image
+{
+    width: 100%;
+    background-color: #EBEFF1 ;
 }
+
+.imgContainer,.name, .price, #products .btn{
+    margin: 10px 0px;
+}
+
 
 .search-filters{
     background: #23242a;

@@ -35,6 +35,7 @@ var settings = {
       let namediv = document.createElement("div");
       let pricediv = document.createElement("div");
       let imagediv = document.createElement("img");
+      let containImg = document.createElement("div")/*Liwei */
       
       let pname = response[i].Name;
       let pprice = response[i].Price;
@@ -46,7 +47,9 @@ var settings = {
       namediv.classList.add("name");
       pricediv.classList.add("price");
       imagediv.classList.add("image");
-      container.appendChild(imagediv);
+      containImg.append(imagediv); /*Liwei */
+      console.log(containImg); /*Liwei */
+      container.appendChild(containImg); /*Liwei */
       container.appendChild(namediv);
       container.appendChild(pricediv);
 
@@ -86,6 +89,18 @@ var settings = {
         productdiv.style.display = "none";
       })
     }
+
+    /*Liwei*/
+    $("#products").addClass("row");
+    $("#products").children().addClass("col-md-4");
+    let btn = $("<button>")
+    btn.addClass("btn btn-primary")
+    btn.attr("type","button")
+    btn.text("Add to cart")
+    $("#products").children().append(btn);
+    $(".image").addClass("img-fluid");
+    $(".image").parent().addClass("imgContainer");
+
 });
 
 searchInput.addEventListener("input", (e) => {
@@ -337,8 +352,7 @@ dropdowns.forEach(dropdown =>{
         }
       }
 
-      //brand
-      if ()
+
 
     });
   })
