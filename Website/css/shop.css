@@ -25,69 +25,112 @@ header h3,header .row{
     margin: 30px 0px;
 }
 
-
-/*---Filter Product---*/
-.filter
-{
-    background-color: #D6EAF8;
-    border-radius: 10px;
-    margin: 0px 0px;
-    margin-bottom: 25px;
-}
-
-.btn-group
-{
-    padding: 0;
-}
-
-/*Filter button*/
-.filter button
-{
-    font-size: large;
-}
-
-.filter button:hover
-{
-    color: white;
-    background-color: black;
-}
-
-.filter button:focus 
-{
-    box-shadow: none;
-}
-
-
 /*---Products---*/
-section h3{
-    margin-bottom: 25px;
+#products{
+    display: flex;
+    background-color: #23A6D5;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.card{
-    border: none;
-    margin-left: 15px;
-    margin-right: 15px;
+#products img{
+    width: 100px;
 }
 
-.card img
-{
-    height: 350px;
-    object-fit: contain;
-    border-radius: 15px;
-    background-color: #EBEFF1 ;
+#products div{
+    display: inline-block;
 }
 
-/*Owl carousel*/
-.owl-nav {
-    font-size: 30px;
-    padding: 0px;
-  }
+.search-filters{
+    background: #23242a;
+    min-height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-  .owl-theme .owl-nav [class*=owl-] 
-  {
-    width: 30px;
-  }
-  
+.select-filter{
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+}
+
+.select-filter * {
+    box-sizing: border-box;
+}
+
+.select{
+    background: #2a2f3b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.select-clicked {
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.caret-rotate{
+    transform: rotate(180deg);
+}
+
+.select:hover{
+    background: #323741;
+}
+
+.menu{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover{
+    background: #2a2d35;
+}
+
+.list-selected {
+    background: #23242a;
+}
+
+.menu-open{
+    display: block;
+    opacity: 1;
+}
+
 
 
 @media (max-width: 992px) {

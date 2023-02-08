@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -33,44 +33,23 @@
         <div class="container-xl">
         <h3 class="text-center">What are you looking for?</h3>
           <div class="row input-group">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" id="search-bar">
             <button type="button" class="btn btn-outline-primary">search</button>
           </div>
         </div>
     </header>
 
-    <!--Products-->
-    <section>
-        <div class="listing container-xl">
-
-             <!--Filter Product-->
-            <div class="filter row">
-                <div class="btn-group col-md-4">
-                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Price
-                    </button>
-                    <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">$1-100</a>
-                    <a class="dropdown-item" href="#">$101-500</a>
-                    <a class="dropdown-item" href="#">$501-$1000</a>
-                    <a class="dropdown-item" href="#">$1001-$2000</a>
-                    </div>
-                </div>
-                <div class="btn-group col-md-4">
-                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Brand
-                    </button>
-                    <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Apple</a>
-                    <a class="dropdown-item" href="#">Samsung</a>
-                    <a class="dropdown-item" href="#">LG</a>
-                    <a class="dropdown-item" href="#">Oppo</a>
-                    </div>
-                </div>
-                <div class="btn-group col-md-4">
-                    <button type="button" class="btn ">Reset Filters</button>
-                </div>
-              </div>
+    <!--Search filters-->
+    <div class="select-filter">
+      <div class="select">
+        <span class="selected">Products</span>
+        <div class="caret"></div>
+      </div>
+      <ul class="menu">
+        <li class="list-selected" id="filterPhones">Phones</li>
+        <li class="" id="filterAccessories">Accessories</li>
+      </ul>
+    </div>
 
               <section>
                 <div class="container-xl">
@@ -82,8 +61,7 @@
                 </div>
               </section>
 
-        </div> 
-      </section>
+    </div>
 
     <!--footer-->
     <footer>
