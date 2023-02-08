@@ -13,6 +13,7 @@ const searchInput = document.getElementById("search-bar");
 let products = [];
 let phones = [];
 let accessories = [];
+let hiddenitemslist = [];
 
 var settings = {
     "async": true,
@@ -56,7 +57,7 @@ var settings = {
       container.id = response[i]._id;
       root.appendChild(container);
 
-      const item = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand};
+      const item = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand, type: response[i].ProductType, display: true, review: response[i].Review};
       products.push(item);
 
       if (response[i].ProductType === "Phone"){
@@ -70,23 +71,15 @@ var settings = {
     }
 
     if (optionPhone.className === "list-selected"){
-      accessories.forEach(product => {
+      products.forEach(product => {
         const productdiv = document.getElementById(product.id);
-        productdiv.style.display = "none";
-      })
-      phones.forEach(product => {
-        const productdiv = document.getElementById(product.id);
-        productdiv.style.display = "block";
-      })
-    }
-    else if (optionAccessories.className === "list-selected"){
-      accessories.forEach(product => {
-        const productdiv = document.getElementById(product.id);
-        productdiv.style.display = "block";
-      })
-      phones.forEach(product => {
-        const productdiv = document.getElementById(product.id);
-        productdiv.style.display = "none";
+        if (product.type != "Phone"){
+          productdiv.style.display = "none";
+          product.display = false;
+        }
+        else if (product.type === "Phone"){
+          productdiv.style.display = "block";
+        }
       })
     }
 
@@ -102,39 +95,6 @@ var settings = {
     $(".image").parent().addClass("imgContainer");
 
 });
-
-searchInput.addEventListener("input", (e) => {
-  const input = e.target.value.toLowerCase();
-  console.log(input);
-  if (optionPhone.className === "list-selected"){
-    phones.forEach(product => {
-      const productdiv = document.getElementById(product.id);
-      if (!product.name.includes(input)){
-        productdiv.style.display = "none";
-      }
-      else if (input.length === 0){
-        productdiv.style.display = "block";
-      }
-      else if (product.name.includes(input)){
-        productdiv.style.display = "block";
-      }
-    })
-  }
-  else if (optionAccessories.className === "list-selected"){
-    accessories.forEach(product => {
-      const productdiv = document.getElementById(product.id);
-      if (!product.name.includes(input)){
-        productdiv.style.display = "none";
-      }
-      else if (input.length === 0){
-        productdiv.style.display = "block";
-      }
-      else if (product.name.includes(input)){
-        productdiv.style.display = "block";
-      }
-    })
-  }
-})
 
 //search filters
 let optionPhone = document.getElementById("filterPhones");
@@ -152,6 +112,11 @@ let apple = document.getElementById("apple");
 let xiaomi = document.getElementById("xiaomi");
 let google = document.getElementById("google");
 let others = document.getElementById("others");
+
+let reviews = document.getElementById("reviews");
+let threestars = document.getElementById("3stars");
+let fourstars = document.getElementById("4stars");
+let fivestars = document.getElementById("5stars");
 
 const dropdowns = document.querySelectorAll(".select-filter");
 dropdowns.forEach(dropdown =>{
@@ -181,179 +146,281 @@ dropdowns.forEach(dropdown =>{
 
       //products
       if (optionPhone.className === "list-selected"){
-        accessories.forEach(product => {
+        products.forEach(product => {
           const productdiv = document.getElementById(product.id);
-          productdiv.style.display = "none";
-        })
-        phones.forEach(product => {
-          const productdiv = document.getElementById(product.id);
-          productdiv.style.display = "block";
+          if (product.type != "Phone"){
+            productdiv.style.display = "none";
+            product.display = false;
+          }
+          else {
+            productdiv.style.display = "block";
+            product.display = true;
+          }
         })
       }
       else if (optionAccessories.className === "list-selected"){
-        accessories.forEach(product => {
+        products.forEach(product => {
           const productdiv = document.getElementById(product.id);
-          productdiv.style.display = "block";
-        })
-        phones.forEach(product => {
-          const productdiv = document.getElementById(product.id);
-          productdiv.style.display = "none";
+          if (product.type != "Accessories"){
+            productdiv.style.display = "none";
+            product.display = false;
+          }
+          else {
+            productdiv.style.display = "block";
+            product.display = true;
+          }
         })
       }
 
       //price range
       if (pricerange.className === "list-selected"){
-        if(optionPhone.className === "list-selected"){
-          phones.forEach(product => {
-            const productdiv = document.getElementById(product.id);
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
             productdiv.style.display = "block";
-          })
-        }
-        else if (optionAccessories.className === "list-selected"){
-          accessories.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-            productdiv.style.display = "block";
-          })
-        }
+            product.display = true;
+          }
+        })
       }
-
       else if (hundredto3.className === "list-selected"){
-        if(optionPhone.className === "list-selected"){
-          phones.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
-            if (product.price > 100 && product.price < 300){
-              productdiv.style.display = "block";
-            }
-            else {
-              productdiv.style.display = "none";
-            }
-          })
-        }
-        else if (optionAccessories.className === "list-selected"){
-          accessories.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
             if (product.price > 100 && product.price <= 300){
               productdiv.style.display = "block";
+              product.display = true;
             }
             else {
               productdiv.style.display = "none";
+              product.display = false;
             }
-          })
-        }
+          }
+        })
       }
-
       else if (threehundredto5.className === "list-selected"){
-        if(optionPhone.className === "list-selected"){
-          phones.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
             if (product.price > 300 && product.price <= 500){
               productdiv.style.display = "block";
+              product.display = true;
             }
             else {
               productdiv.style.display = "none";
+              product.display = false;
             }
-          })
-        }
-        else if (optionAccessories.className === "list-selected"){
-          accessories.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
-            if (product.price > 300 && product.price <= 500){
-              productdiv.style.display = "block";
-            }
-            else {
-              productdiv.style.display = "none";
-            }
-          })
-        }
+          }
+        })
       }
-
       else if (fivehundredto7.className === "list-selected"){
-        if(optionPhone.className === "list-selected"){
-          phones.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
             if (product.price > 500 && product.price <= 700){
               productdiv.style.display = "block";
+              product.display = true;
             }
             else {
               productdiv.style.display = "none";
+              product.display = false;
             }
-          })
-        }
-        else if (optionAccessories.className === "list-selected"){
-          accessories.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
-            if (product.price > 500 && product.price <= 700){
-              productdiv.style.display = "block";
-            }
-            else {
-              productdiv.style.display = "none";
-            }
-          })
-        }
+          }
+        })
       }
-
       else if (sevenhundredto9.className === "list-selected"){
-        if(optionPhone.className === "list-selected"){
-          phones.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
             if (product.price > 700 && product.price <= 900){
               productdiv.style.display = "block";
+              product.display = true;
             }
             else {
               productdiv.style.display = "none";
+              product.display = false;
             }
-          })
-        }
-        else if (optionAccessories.className === "list-selected"){
-          accessories.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
-            if (product.price > 700 && product.price <= 900){
-              productdiv.style.display = "block";
-            }
-            else {
-              productdiv.style.display = "none";
-            }
-          })
-        }
+          }
+        })
       }
-
       else if (morethan900.className === "list-selected"){
-        if(optionPhone.className === "list-selected"){
-          phones.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
             if (product.price > 900){
               productdiv.style.display = "block";
+              product.display = true;
             }
             else {
               productdiv.style.display = "none";
+              product.display = false;
             }
-          })
-        }
-        else if (optionAccessories.className === "list-selected"){
-          accessories.forEach(product => {
-            const productdiv = document.getElementById(product.id);
-
-            if (product.price > 900){
-              productdiv.style.display = "block";
-            }
-            else {
-              productdiv.style.display = "none";
-            }
-          })
-        }
+          }
+        })
       }
 
+      //brands
+      if (allbrands.className === "list-selected"){
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            productdiv.style.display = "block";
+            product.display = true;
+          }
+        })
+      }
+      else if (apple.className === "list-selected"){
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            if (product.brand === "Apple"){
+              productdiv.style.display = "block";
+              product.display = true;
+            }
+            else {
+              productdiv.style.display = "none";
+              product.display = false;
+            }
+          }
+        })
+      }
+      else if (xiaomi.className === "list-selected"){
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            if (product.brand === "Xiaomi"){
+              productdiv.style.display = "block";
+              product.display = true;
+            }
+            else {
+              productdiv.style.display = "none";
+              product.display = false;
+            }
+          }
+        })
+      }
+      else if (google.className === "list-selected"){
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            if (product.brand === "Google"){
+              productdiv.style.display = "block";
+              product.display = true;
+            }
+            else {
+              productdiv.style.display = "none";
+              product.display = false;
+            }
+          }
+        })
+      }
+      else if (others.className === "list-selected"){
+        products.forEach(product => {
+          const brand = product.brand;
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            if (brand != "Apple" && brand != "Xiaomi" && brand != "Google"){
+              productdiv.style.display = "block";
+              product.display = true;
+            }
+            else {
+              productdiv.style.display = "none";
+              product.display = false;
+            }
+          }
+        })
+      }
 
+      //review
+      if (reviews.className === "list-selected"){
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            productdiv.style.display = "block";
+            product.display = true;
+          }
+        })
+      }
+      else if (threestars.className === "list-selected"){
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            if (product.review >= 3 && product.review < 4){
+              productdiv.style.display = "block";
+              product.display = true;
+            }
+            else {
+              productdiv.style.display = "none";
+              product.display = false;
+            }
+          }
+        })
+      }
+      else if (fourstars.className === "list-selected"){
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            if (product.review >= 4 && product.review < 5){
+              productdiv.style.display = "block";
+              product.display = true;
+            }
+            else {
+              productdiv.style.display = "none";
+              product.display = false;
+            }
+          }
+        })
+      }
+      else if (fivestars.className === "list-selected"){
+        products.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          if (product.display === true){
+            if (product.review === 5){
+              productdiv.style.display = "block";
+              product.display = true;
+            }
+            else {
+              productdiv.style.display = "none";
+              product.display = false;
+            }
+          }
+        })
+      }
 
     });
   })
 });
+
+searchInput.addEventListener("input", (e) => {
+  const input = e.target.value.toLowerCase();
+  console.log(input);
+  products.forEach(product => {
+    const productdiv = document.getElementById(product.id);
+    if (product.display === true){
+      console.log("bryant");
+      if (product.name.includes(input)){
+        console.log("chen yu");
+        productdiv.style.display = "block";
+        product.display = true;
+      }
+      else {
+        console.log("shawn");
+        productdiv.style.display = "none";
+        product.display = false;
+        const hiddenitems = {id: product.id};
+        hiddenitemslist.push(hiddenitems);
+      }
+    }
+    else if (input.length === 0){
+      console.log("johnathan");
+      hiddenitemslist.forEach(item => {
+        const productdiv = document.getElementById(item.id);
+        productdiv.style.display = "block";
+        products.forEach(product => {
+          if (product.id === item.id){
+            product.display = true;
+          }
+        })
+      })
+    }
+  })
+})
