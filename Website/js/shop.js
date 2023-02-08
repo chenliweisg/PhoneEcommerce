@@ -60,6 +60,7 @@ var settings = {
       container.appendChild(reviewdiv);
 
       container.id = response[i]._id;
+      container.classList.add("products-container");
       root.appendChild(container);
 
       const item = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand, type: response[i].ProductType, display: true, review: response[i].Review};
@@ -87,6 +88,13 @@ var settings = {
         }
       })
     }
+
+    let parentcontainer = document.getElementsByClassName("products-preview");
+    let childcontainer = document.createElement("div");
+
+
+
+
 
     /*Liwei*/
     $("#products").addClass("row");
