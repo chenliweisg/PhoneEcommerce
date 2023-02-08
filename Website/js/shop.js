@@ -125,6 +125,19 @@ searchInput.addEventListener("input", (e) => {
 let optionPhone = document.getElementById("filterPhones");
 let optionAccessories = document.getElementById("filterAccessories");
 
+let pricerange = document.getElementById("pricerange");
+let hundredto3 = document.getElementById("100to300"); 
+let threehundredto5 = document.getElementById("300to500");
+let fivehundredto7 = document.getElementById("500to700");
+let sevenhundredto9 = document.getElementById("700to900");
+let morethan900 = document.getElementById("more900");
+
+let allbrands = document.getElementById("allbrands");
+let apple = document.getElementById("apple");
+let xiaomi = document.getElementById("xiaomi");
+let google = document.getElementById("google");
+let others = document.getElementById("others");
+
 const dropdowns = document.querySelectorAll(".select-filter");
 dropdowns.forEach(dropdown =>{
   const select = dropdown.querySelector(".select");
@@ -149,9 +162,9 @@ dropdowns.forEach(dropdown =>{
       options.forEach(option => {
         option.className = "";
       });
-
       option.className = "list-selected";
 
+      //products
       if (optionPhone.className === "list-selected"){
         accessories.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -172,6 +185,161 @@ dropdowns.forEach(dropdown =>{
           productdiv.style.display = "none";
         })
       }
-      })
+
+      //price range
+      if (pricerange.className === "list-selected"){
+        if(optionPhone.className === "list-selected"){
+          phones.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+            productdiv.style.display = "block";
+          })
+        }
+        else if (optionAccessories.className === "list-selected"){
+          accessories.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+            productdiv.style.display = "block";
+          })
+        }
+      }
+
+      else if (hundredto3.className === "list-selected"){
+        if(optionPhone.className === "list-selected"){
+          phones.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 100 && product.price < 300){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+        else if (optionAccessories.className === "list-selected"){
+          accessories.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 100 && product.price <= 300){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+      }
+
+      else if (threehundredto5.className === "list-selected"){
+        if(optionPhone.className === "list-selected"){
+          phones.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 300 && product.price <= 500){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+        else if (optionAccessories.className === "list-selected"){
+          accessories.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 300 && product.price <= 500){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+      }
+
+      else if (fivehundredto7.className === "list-selected"){
+        if(optionPhone.className === "list-selected"){
+          phones.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 500 && product.price <= 700){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+        else if (optionAccessories.className === "list-selected"){
+          accessories.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 500 && product.price <= 700){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+      }
+
+      else if (sevenhundredto9.className === "list-selected"){
+        if(optionPhone.className === "list-selected"){
+          phones.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 700 && product.price <= 900){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+        else if (optionAccessories.className === "list-selected"){
+          accessories.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 700 && product.price <= 900){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+      }
+
+      else if (morethan900.className === "list-selected"){
+        if(optionPhone.className === "list-selected"){
+          phones.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 900){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+        else if (optionAccessories.className === "list-selected"){
+          accessories.forEach(product => {
+            const productdiv = document.getElementById(product.id);
+
+            if (product.price > 900){
+              productdiv.style.display = "block";
+            }
+            else {
+              productdiv.style.display = "none";
+            }
+          })
+        }
+      }
+
+      //brand
+      if ()
+
     });
-  });
+  })
+});
