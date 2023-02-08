@@ -35,24 +35,29 @@ var settings = {
       let container = document.createElement("div");
       let namediv = document.createElement("div");
       let pricediv = document.createElement("div");
+      let reviewdiv = document.createElement("div");
       let imagediv = document.createElement("img");
       let containImg = document.createElement("div")/*Liwei */
       
       let pname = response[i].Name;
       let pprice = response[i].Price;
+      let preview = response[i].Review;
 
       imagediv.setAttribute("src", response[i].Image);
       namediv.textContent = pname;
       pricediv.textContent = "$" + pprice;
+      reviewdiv.textContent = preview;
 
       namediv.classList.add("name");
       pricediv.classList.add("price");
+      reviewdiv.classList.add("review");
       imagediv.classList.add("image");
       containImg.append(imagediv); /*Liwei */
       console.log(containImg); /*Liwei */
       container.appendChild(containImg); /*Liwei */
       container.appendChild(namediv);
       container.appendChild(pricediv);
+      container.appendChild(reviewdiv);
 
       container.id = response[i]._id;
       root.appendChild(container);
@@ -396,14 +401,11 @@ searchInput.addEventListener("input", (e) => {
   products.forEach(product => {
     const productdiv = document.getElementById(product.id);
     if (product.display === true){
-      console.log("bryant");
       if (product.name.includes(input)){
-        console.log("chen yu");
         productdiv.style.display = "block";
         product.display = true;
       }
       else {
-        console.log("shawn");
         productdiv.style.display = "none";
         product.display = false;
         const hiddenitems = {id: product.id};
@@ -411,7 +413,6 @@ searchInput.addEventListener("input", (e) => {
       }
     }
     else if (input.length === 0){
-      console.log("johnathan");
       hiddenitemslist.forEach(item => {
         const productdiv = document.getElementById(item.id);
         productdiv.style.display = "block";

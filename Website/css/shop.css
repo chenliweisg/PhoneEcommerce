@@ -52,6 +52,10 @@ header h3,header .row{
     margin: 10px 0px;
 }
 
+/*---filters---*/
+.filter-container{
+    display: inline-flex;
+}
 
 .search-filters{
     background: #23242a;
