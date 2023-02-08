@@ -10,8 +10,9 @@ $(document).ready(function() {
     });
 
 const searchInput = document.getElementById("search-bar");
-let accessories = [];
+let products = [];
 let phones = [];
+let accessories = [];
 
 var settings = {
     "async": true,
@@ -52,26 +53,125 @@ var settings = {
       container.id = response[i]._id;
       root.appendChild(container);
 
-      const productObject = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand};
-      products.push(productObject);
+      const item = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand};
+      products.push(item);
+
+      if (response[i].ProductType === "Phone"){
+        const productObject = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand};
+        phones.push(productObject);
+      }
+      else {
+        const productObject = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand};
+        accessories.push(productObject);
+      }
     }
-  });
+
+    if (optionPhone.className === "list-selected"){
+      accessories.forEach(product => {
+        const productdiv = document.getElementById(product.id);
+        productdiv.style.display = "none";
+      })
+      phones.forEach(product => {
+        const productdiv = document.getElementById(product.id);
+        productdiv.style.display = "block";
+      })
+    }
+    else if (optionAccessories.className === "list-selected"){
+      accessories.forEach(product => {
+        const productdiv = document.getElementById(product.id);
+        productdiv.style.display = "block";
+      })
+      phones.forEach(product => {
+        const productdiv = document.getElementById(product.id);
+        productdiv.style.display = "none";
+      })
+    }
+});
 
 searchInput.addEventListener("input", (e) => {
   const input = e.target.value.toLowerCase();
   console.log(input);
-  products.forEach(product => {
-    const productdiv = document.getElementById(product.id);
-    if (!product.name.includes(input)){
-      productdiv.style.display = "none";
-    }
-    else if (input.length === 0){
-      productdiv.style.display = "block";
-      console.log("nth if")
-    }
-    else if (product.name.includes(input)){
-      productdiv.style.display = "block";
-    }
-  })
-  
+  if (optionPhone.className === "list-selected"){
+    phones.forEach(product => {
+      const productdiv = document.getElementById(product.id);
+      if (!product.name.includes(input)){
+        productdiv.style.display = "none";
+      }
+      else if (input.length === 0){
+        productdiv.style.display = "block";
+      }
+      else if (product.name.includes(input)){
+        productdiv.style.display = "block";
+      }
+    })
+  }
+  else if (optionAccessories.className === "list-selected"){
+    accessories.forEach(product => {
+      const productdiv = document.getElementById(product.id);
+      if (!product.name.includes(input)){
+        productdiv.style.display = "none";
+      }
+      else if (input.length === 0){
+        productdiv.style.display = "block";
+      }
+      else if (product.name.includes(input)){
+        productdiv.style.display = "block";
+      }
+    })
+  }
 })
+
+//search filters
+let optionPhone = document.getElementById("filterPhones");
+let optionAccessories = document.getElementById("filterAccessories");
+
+const dropdowns = document.querySelectorAll(".select-filter");
+dropdowns.forEach(dropdown =>{
+  const select = dropdown.querySelector(".select");
+  const caret = dropdown.querySelector(".caret");
+  const menu = dropdown.querySelector(".menu");
+  const options = dropdown.querySelectorAll(".menu li");
+  const selected = dropdown.querySelector(".selected");
+
+  select.addEventListener("click", () =>{
+    select.classList.toggle("select-clicked");
+    caret.classList.toggle("caret-rotate");
+    menu.classList.toggle("menu-open");
+  });
+
+  options.forEach(option =>{
+    option.addEventListener("click", () =>{
+      selected.innerText = option.innerText;
+      select.classList.remove("select-clicked");
+      caret.classList.remove("caret-rotate");
+      menu.classList.remove("menu-open");
+
+      options.forEach(option => {
+        option.className = "";
+      });
+
+      option.className = "list-selected";
+
+      if (optionPhone.className === "list-selected"){
+        accessories.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          productdiv.style.display = "none";
+        })
+        phones.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          productdiv.style.display = "block";
+        })
+      }
+      else if (optionAccessories.className === "list-selected"){
+        accessories.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          productdiv.style.display = "block";
+        })
+        phones.forEach(product => {
+          const productdiv = document.getElementById(product.id);
+          productdiv.style.display = "none";
+        })
+      }
+      })
+    });
+  });
