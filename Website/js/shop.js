@@ -50,6 +50,7 @@ var settings = {
 
       namediv.classList.add("name");
       pricediv.classList.add("price");
+      pricediv.setAttribute("data-price",pprice)
       reviewdiv.classList.add("review");
       imagediv.classList.add("image");
       containImg.append(imagediv); /*Liwei */
@@ -93,12 +94,69 @@ var settings = {
     $("#products").addClass("row");
     $("#products").children().addClass("col-md-4");
     let btn = $("<button>")
-    btn.addClass("btn btn-primary")
+    btn.addClass("addCart btn btn-primary btn-lg btn-block")
     btn.attr("type","button")
     btn.text("Add to cart")
     $("#products").children().append(btn);
     $(".image").addClass("img-fluid");
     $(".image").parent().addClass("imgContainer");
+
+
+    /*Add to cart button*/
+    $(".addCart").on("click",function(event){
+
+      let addCartBtn = event.target
+      let cardDiv = $(addCartBtn).parent();
+      /*Get the img, name, price and rating from the product card*/
+      let img = cardDiv.find("img").attr("src")
+      let name = cardDiv.find(".name").text()
+      let price = cardDiv.find(".price").data("price")
+      let rating = cardDiv.find(".review").text()
+      console.log(img,name,price,rating)
+
+      /*CartList from localstorage*/
+      let cart = JSON.parse(localStorage.getItem("cart"))
+
+      /*When CartList from localstorage is null, give cart an empty array*/
+      if(JSON.parse(localStorage.getItem("cart"))==null)
+      {
+        cart = []
+      }
+
+      /*new Item object function*/
+      function item(image,name,price,review,qty){
+          this.image = image;
+          this.name = name;
+          this.price = price;
+          this.review = review;
+          this.qty = qty;
+      }
+
+      /*Create new item with the data from API*/
+      let newItem = new item(img,name,price,rating,1);
+      
+      /*Loop through the cart to see if the current item already existed in cart*/
+      var found = false
+      for (let i = 0; i < cart.length; i++) {
+        if(cart[i].name == name){
+          cart[i].qty +=1;
+          /*Update the new qty of the item in localstorage*/
+          localStorage.setItem("cart",JSON.stringify(cart));
+          found = true;
+          break;
+        }
+      }
+      
+      /*When the item does not exist in the cart, push it to localstorage*/
+      if (found == false){
+        cart.push(newItem);
+        localStorage.setItem("cart",JSON.stringify(cart));
+      }
+
+      /*Alert user item is added*/
+      alert("ITEM ADDED TO CART")
+      
+    });
 
 });
 

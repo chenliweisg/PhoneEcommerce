@@ -60,7 +60,7 @@ $.ajax(settings).done(function (response) {
       $(".add-cart").on("click",function(event){
         var btnClicked = event.target
         
-        /*Get the img, name, price and rating of the product from API*/
+        /*Get the img, name, price and rating of the product.*/
         var img = $(btnClicked).parent().siblings('.card-img-top').attr("src")
         var name = $(btnClicked).siblings('.product-name').text()
         var price = $(btnClicked).siblings('.product-price').text()

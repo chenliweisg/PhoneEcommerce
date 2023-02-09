@@ -1,15 +1,7 @@
-/*.dropdown-toggle::after {
-    display:none;
-}*/
 /*---Header---*/
 header{
     padding: 100px 15px;
     min-height: 400px;
-}
-
-section
-{
-    padding: 100px 15px;
 }
 
 header
@@ -26,6 +18,11 @@ header h3,header .row{
 }
 
 /*---Products---*/
+#products{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 #products .col-md-4{
     margin: 20px 0px;
     padding: 0px 20px;
@@ -48,8 +45,22 @@ header h3,header .row{
     background-color: #EBEFF1 ;
 }
 
+#products .name{
+    font-size: larger;
+    font-weight: 600;
+}
+
+#products .price{
+    font-size: larger;
+}
+
 .imgContainer,.name, .price, #products .btn{
     margin: 10px 0px;
+}
+
+#products .btn:hover{
+    background-color: black;
+    color: white;
 }
 
 /*---filters---*/
@@ -67,7 +78,8 @@ header h3,header .row{
 .select-filter{
     min-width: 15em;
     position: relative;
-    margin: 2em;
+    /*margin: 2em;*/
+    margin-top: 15px;
 }
 
 .select-filter * {
@@ -119,7 +131,7 @@ header h3,header .row{
     position: absolute;
     top: 3em;
     left: 50%;
-    width: 100%;
+    width: calc(100% - 30px);
     transform: translateX(-50%);
     opacity: 0;
     display: none;
@@ -147,16 +159,15 @@ header h3,header .row{
     opacity: 1;
 }
 
-
-
-
-@media (max-width: 992px) {
-
+@media (max-width: 1200px) {
+    #products{
+        padding: 0px 10px;
+    }
 }
 
-@media (max-width: 575px) {
-    .listing .row
-    {       
-        margin-bottom: 40px;
+@media (max-width: 767px) {
+    #products .col-md-4{
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
