@@ -84,13 +84,26 @@ section .upsales
 
 .upsales .card img
 {
-    width: 100px;
-    margin: auto;
+    height: 250px;
+    object-fit: contain;
+}
+
+.upsales .img-wrapper
+{
+    border-radius: 15px;
+    background-color: #EBEFF1 ;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .upsales .card button
 {
     width: 100%;
+}
+
+.upsales .row
+{
+    margin-top: 20px;
 }
 
 @media (max-width: 992px) {
@@ -112,6 +125,7 @@ section .upsales
     {
         display: none;
     }
+    
 }
 
 @media (max-width: 767px) {   
@@ -143,6 +157,16 @@ section .upsales
     .remove-prod button
     {
         width: 100%;
+    }
+
+    .upsales .row h5
+    {
+        text-align: center;
+    }
+
+    .cart-items .card,.summary .card
+    {
+        margin: 0px 20px;
     }
 
 }

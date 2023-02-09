@@ -13,7 +13,8 @@ header{
 section
 {
     padding: 0px 15px;
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /*---Header---*/
@@ -24,11 +25,22 @@ header
     background-attachment: fixed;
 }
 
-/*---Category---*/
-.category{
-    
+header .row{
+    color: white;
 }
-.phone h3
+
+header .btn
+{
+    margin-top: 25px;
+}
+
+header .lottie{
+    display: flex;
+    justify-content: center;
+}
+
+/*---Category---*/
+.category .phone h3
 {
     text-align: center;
     background-image: url("https://media.wired.com/photos/62d75d34ddaaa99a1df8e61d/master/pass/Phone-Camera-Webcam-Gear-GettyImages-1241495650.jpg");
@@ -39,7 +51,7 @@ header
     transition-duration: 0.5s;
 }
 
-.phone h3:hover
+.category .phone h3:hover
 {
     cursor: pointer;
     color: white;
@@ -48,7 +60,7 @@ header
     background-position: center;
 }
 
-.accs h3
+.category .accs h3
 {
     text-align: center;
     background-image: url("https://www.rd.com/wp-content/uploads/2017/08/Untitled-4phoneaccessories.jpg");
@@ -59,7 +71,7 @@ header
     transition-duration: 0.5s;
 }
 
-.accs h3:hover
+.category .accs h3:hover
 {
     cursor: pointer;
     color: white;
@@ -68,13 +80,16 @@ header
     background-position: center;
 }
 
-.card{
-    border: none;
-    margin-left: 15px;
-    margin-right: 15px;
+/*Product*/
+.product{
+    padding-top: 0px;
 }
 
-.card img
+.product .card{
+    border: none;
+}
+
+.product .card img
 {
     height: 350px;
     object-fit: contain;
@@ -82,11 +97,13 @@ header
     background-color: #EBEFF1 ;
 }
 
-/*Product*/
-.product{
-    background-color: none;
+.product h3{
+    margin: 20px 0px;
 }
 
+.product .btn{
+    width: 100%;
+}
 
 /*Offer*/
 .offer{
@@ -164,10 +181,26 @@ header
 @media (min-width: 1200px) {
     .container-xl{
         max-width: 1200px;
+        
     }
 }
 
 @media (max-width: 992px) {
+    /*Header text layout and styling*/
+    header .row{
+        text-align: center;
+    }
+
+    header .col-sm-12{
+        margin: 30px 0px;
+    }
+
+
+    /*---Category---*/
+    .category .phone{
+        margin-bottom: 100px;
+    }
+
     /*offer-prod*/
     .offer-prod{
         justify-content: space-evenly;
@@ -203,6 +236,12 @@ header
 }
 
 @media (max-width: 767px) {
+
+    /**/
+    .product .card {
+        padding-bottom: 100px;
+    }
+
     /*offer-prod*/
     .offer-prod{
         text-align: center;
@@ -222,19 +261,15 @@ header
         margin-top: 15%;
         margin-bottom: 5%;
     }
+    
 }
 
-.owl-nav {
-    font-size: 52px;
-    padding: 0;
-  }
-
-  .offer{
-          /*Google fonts*/
-          font-family: 'Mitr', sans-serif;
-  }
+.offer{
+    /*Google fonts*/
+    font-family: 'Mitr', sans-serif;
+}
 
 body{
-      /*Google fonts*/
-      font-family: 'Quantico', sans-serif;
+    /*Google fonts*/
+    font-family: 'Quantico', sans-serif;
 }
