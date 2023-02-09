@@ -88,14 +88,7 @@ var settings = {
         }
       })
     }
-
-    let parentcontainer = document.getElementsByClassName("products-preview");
-    let childcontainer = document.createElement("div");
-
-
-
-
-
+    
     /*Liwei*/
     $("#products").addClass("row");
     $("#products").children().addClass("col-md-4");
