@@ -54,7 +54,7 @@ header h3,header .row{
 
 /*---filters---*/
 .filter-container{
-    display: inline-flex;
+    display: flex;
 }
 
 .search-filters{
@@ -146,6 +146,7 @@ header h3,header .row{
     display: block;
     opacity: 1;
 }
+
 
 
 
