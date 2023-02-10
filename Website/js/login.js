@@ -126,6 +126,8 @@ submit.onclick = function(e){
         console.log(response);
         });
 
+        alert("Sign up successful! Please sign in.");
+
         //clear form
         signupName.value = "";
         signupEmail.value = "";
