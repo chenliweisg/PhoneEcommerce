@@ -93,4 +93,4 @@ Credit to Liwei
 
 ### Acknowledgements
 
-[Template of the website](https://dribbble.com/)
+[Web design & wireframes inspiration](https://dribbble.com/timemachine2244/collections/6252658-assignment-2?utm_source=Clipboard_%22clipboard_collection%22&utm_campaign=%22timemachine2244%22&utm_content=%22assignment%202%22&utm_medium=Social_Share)
