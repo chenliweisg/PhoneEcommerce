@@ -50,6 +50,8 @@ signupBtn.onclick = function(){
     submit.innerHTML = "Sign up";
 }
 
+let memberinfo = []
+
 submit.onclick = function(e){
     e.preventDefault();
     submit.disabled = true;
@@ -74,7 +76,12 @@ submit.onclick = function(e){
 
             for (i=0; i<response.length; i++){
                 if (signinEmail.value === response[i].Email && signinPassword.value === response[i].Password) {
-                    localStorage.setItem("name", response[i].Name);
+                    // function username(name){
+                    //     this.name = name;
+                    // }
+                    // let newusername = new username(response[i].name);
+                    // memberinfo.push(newusername);
+                    sessionStorage.setItem("member", JSON.stringify(response[i].Name));
                     location.href = '../html/home.html';
                     submit.disabled = false;
                     break;

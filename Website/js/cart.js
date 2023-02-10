@@ -1,6 +1,10 @@
 $(document).ready(function() {
     $.ajax({url:"../html/navbar.html", success:function(result){
         $("nav.bg-dark").html(result);
+        if (JSON.parse(sessionStorage.getItem("member")) != null){
+            let login = document.getElementById("login");
+            login.innerHTML = `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`;
+          }
     }});
     
     $.ajax({url:"../html/footer.html", success:function(result){
