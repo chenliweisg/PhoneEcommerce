@@ -1,4 +1,4 @@
-# xPhone :iphone:
+# LWBD :iphone:
 
 This website will sell a variety of phones. Customers can compare the phones and decide what is the best for them. They can also login and play reward games for coupons. The objective of this website is to attract customers to buy phones from us.
 
@@ -26,12 +26,12 @@ click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf
 ### Features Left to Implement
 
 - Feature 1 - scroll back to top button
-- Feature 2 - Social media icon will disappear when scrolled to the bottom of the page. (https://www.mockplus.com/blog/post/interactive-website-example)
+- Feature 2 - Social media icon will disappear when scrolled to the bottom of the page.
 - Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, timer game, calculation game)
 - Feature 4 - Product recommendation.
 - Feature 5 - Daily login reward
 - Feature 6 - Search for product
-- Feature 7 - left and right button to view more products (https://blog.hubspot.com/website/interactive-websites)
+- Feature 7 - left and right button to view more products
 - Feature 8 - video, image, sound
 - Feature 9 - Map
 - Feature 10 - Rating
