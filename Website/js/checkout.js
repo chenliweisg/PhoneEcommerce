@@ -119,4 +119,23 @@ var anime = bodymovin.loadAnimation({
 
     anime.addEventListener('complete', () => {
         $('.confetti').addClass('hide');   
+        
+    /*Direct to index page*/
+    $(location).prop('href', '../html/index.html');
     });
+
+
+/*CartList from localstorage*/
+let cart = JSON.parse(localStorage.getItem("cart"));
+
+/*When user clicked place order*/
+$("#placeOrder").on("click",function(event){
+    alert("Thank you for buying!")
+    /*Clear the cart*/
+    while (cart.length > 0) {
+        cart.pop();
+    }
+
+    /**Update the localstorage*/
+    localStorage.setItem("cart",JSON.stringify(cart));
+  });

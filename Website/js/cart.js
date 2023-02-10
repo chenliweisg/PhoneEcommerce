@@ -82,7 +82,7 @@ $(document).ready(function() {
             btn.addClass("btn btn-primary")
             btn.attr("type","button")
             btn.text("Add to cart")
-
+        
         proddiv.append(carddiv);
         carddiv.append(imgdiv,cardbodydiv);
         cardbodydiv.append(h5,h6,p,btn)
@@ -166,7 +166,7 @@ $(document).ready(function() {
 
             /*update the number of item in the card*/
             $(".noOfItem").text(cart.length+ " items")
-
+            
             let newItemPrice = parseFloat($('.item').eq(cart.length-1).find('.prod-price').data("price"))
             console.log(newItemPrice)
             /*Update Subtotal*/
@@ -176,7 +176,7 @@ $(document).ready(function() {
             /*Calculate total amt*/
             totalAmt = subtotal - 219
             $(".totalAmt h5").text("$"+totalAmt.toFixed(2))     
-
+            
             /*Unhide the cart section & hide the empty cart page*/
             $('.cart-items,.summary').show()
             $('.cart-empty').hide()
@@ -205,10 +205,9 @@ $(document).ready(function() {
         $('.item').eq(i).find('.prod-name').text(cart[i].name)
         $('.item').eq(i).find('.review').append(cart[i].review)
         $('.item').eq(i).find('#qty').val(cart[i].qty)
-
         $('.item').eq(i).find('.prod-price h6').text("$"+(cart[i].price*cart[i].qty).toFixed(2))
         $('.item').eq(i).find('.prod-price').data("price",cart[i].price)
-
+        
     }
 
     /*Summary*/
@@ -317,7 +316,7 @@ $(document).ready(function() {
             totalAmt = 0
         }
         $(".totalAmt h5").text("$"+totalAmt.toFixed(2))
-
+        
         /*Hide if cart is empty */
         if(cart.length == 0)
         {
@@ -357,5 +356,11 @@ $(document).ready(function() {
 
  
 });
+
+/*Send user to checkout page*/
+$(".ckOutBtn").on("click",function(event){
+    $(location).prop('href', '../html/checkout.html');
+  });
+
 let newcart = JSON.parse(localStorage.getItem("cart"));
 console.log(newcart);

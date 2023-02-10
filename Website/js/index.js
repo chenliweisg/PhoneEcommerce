@@ -121,6 +121,9 @@ $.ajax(settings).done(function (response) {
           localStorage.setItem("cart",JSON.stringify(cart));
         }
         
+        /*Alert user item is added to cart*/
+        alert("Item has been added to the cart!")
+
       });
 
   });
@@ -133,5 +136,10 @@ $(".category .phone h3").on("click",function(event){
 });
 
 $(".category .accs h3").on("click",function(event){
+  $(location).prop('href', '../html/shop.html');
+});
+
+/*When user clicked "Start to shop"*/
+$(".startToshop").on("click",function(event){
   $(location).prop('href', '../html/shop.html');
 });
