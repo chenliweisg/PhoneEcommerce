@@ -17,7 +17,7 @@ This website will sell a variety of phones. Customers can compare the phones and
 - I want to see my transaction history, so i can know how much i have spend in the past.
 - I want to change the password for my account so it's easiler for me to remember.
 
-click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf-a5dc-ad50f5833191-a385/</u>
+Click here to view the [prototype](https://xd.adobe.com/view/f6d62f94-28c2-47bf-a5dc-ad50f5833191-a385/)
 
 ## Features
 
@@ -47,17 +47,15 @@ click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf
 
 ## Technology used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-* HTMl Use to build the structure of the website
-* CSS Use to style the website
-* Javascript A faster method create, retrieve a html content and add evenlistener.
-* [Jquery](https://jquery.com/) retrieve a html content, add evenlistener, display navbar and header in the webpage.
-* [Ajax] Allows web pages to be updated asynchronously by exchanging data.
-* [RestDB] (Use to store all the product's data.) https://restdb.io/
-* [Bootstrap verison 4.6] (https://getbootstrap.com/docs/4.6/getting-started/introduction/) make the website responsive, good looking and template from the website to create navbar.
-* [Lottie](https://lottiefiles.com/) Give the website an animation icon.
-* [fontawesome](https://fontawesome.com/) Internet icon library embedded by HTML.
+* HTMl (Used to build the structure of the website)
+* CSS (Used to style the website)
+* Javascript (To create, retrieve, add HTML content and adding evenlistener)
+* [Jquery](https://jquery.com/) (Retrieve HTML content, add eventlistener, display navbar and header in the webpage)
+* Ajax (Allows web pages to be updated asynchronously by exchanging data)
+* [RestDB](https://restdb.io/) (Use to store all the product's data.)
+* [Bootstrap verison 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) (Make the website responsive, good looking and template from the website to create navbar)
+* [Lottie](https://lottiefiles.com/) (Give the website an animation icon)
+* [fontawesome](https://fontawesome.com/) (Internet icon library embedded by HTML)
 
 ## Testing
 
@@ -65,7 +63,7 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ### Content
 
-- The text for section Y was copied from the Wikipedia article Z
+Information about products were found on google search engine.
 
 ### Media
 
@@ -78,8 +76,21 @@ In this section, you should mention all of the languages, frameworks, libraries,
 * [Promotion background image](https://cdn.macstories.net/icons1529553323730-1637678091349.png)
 * [Promotion item image](https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png)
 
-##### Products
+#### Products
+* [Xiaomi12 Pro](https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1648123671.21955073.png)
+* [iPhone 14](https://media.croma.com/image/upload/v1662655029/Croma%20Assets/Communication/Mobiles/Images/261983_4_mod9ul.png)
+* [iPhone 13](https://pngimg.com/uploads/iphone_13/iphone_13_PNG27.png)
+* [Xiaomi Redmi Note 11 Smartphone](https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-11-pro/specs01.png)
+* [Apple AirPods(3rd generation)](https://www.freepnglogos.com/uploads/airpods-png/imagic-baroda-airpods-5.png)
+* [Google Pixel 7](https://lh3.googleusercontent.com/pUCr-SNE-T8XMC77yvmneR9D6jrFAeYyJjiPbHzXWvIiNzWz9wEqtDhnDYERGC3xft3Fun28vwnjaae2NXBF6FexQYQZN8pqJg=rw-e365-w1024)
+* [iPhone 12](https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662424588/Croma%20Assets/Communication/Mobiles/Images/229925_lhcfej.png/mxw_2048,f_auto)
+
+#### Cart
+* [Empty cart image](http://hsnbazar.com/images/empty-cart.png)
+
+#### Logo
+Credit to Liwei
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+[Template of the website](https://dribbble.com/)
