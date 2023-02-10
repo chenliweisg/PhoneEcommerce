@@ -46,12 +46,13 @@ click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-<ul>
-  <li>HTML (Structure of website)</li>
-  <li>Css (beautiful the website)</li>
-  <li>Javascript (function the website)</li>
-  <li>Adobe XD (website layout idea )</li>
-</ul>
+* HTMl (Use to build the structure of the website)
+* CSS (Use to style the website)
+* Javascript (A faster method create, retrieve a html content and add evenlistener.)
+* Jquery (retrieve a html content, add evenlistener, display navbar and header in the webpage.)
+* Ajax (Allows web pages to be updated asynchronously by exchanging data)
+* RestDB (Use to store all the product's data.)
+* Bootstrap (make the website responsive, good looking and template from the website to create navbar.)
 
 ## Testing
 
