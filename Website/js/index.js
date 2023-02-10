@@ -121,6 +121,9 @@ $.ajax(settings).done(function (response) {
           localStorage.setItem("cart",JSON.stringify(cart));
         }
         
+        /*Alert user item is added to cart*/
+        alert("Item has been added to the cart!")
+
       });
 
   });
