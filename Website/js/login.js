@@ -1,11 +1,11 @@
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
 let nameField = document.getElementById("nameField");
-let title = document.getElementById("title");
+// let title = document.getElementById("title");
 let lostPassword = document.getElementById("lostPassword");
 let clickhere = document.querySelector('p');
 let submit = document.getElementById("signup");
-let inputFields = document.querySelectorAll(".input");
+// let inputFields = document.querySelectorAll(".input");
 
 //make submit button to be disabled
 submit.disabled = true;
@@ -15,9 +15,9 @@ document.getElementById("inputName").onkeyup = function(){
         document.getElementById("inputPassword").onkeyup = function(){
             submit.disabled = false;
             console.log("u gay");
-        }
-    }
-}
+        };
+    };
+};
 
 // swapping around sign in and sign out
 signinBtn.onclick = function(){
@@ -34,10 +34,9 @@ signinBtn.onclick = function(){
     document.getElementById("inputEmail").onkeyup = function(){
         document.getElementById("inputPassword").onkeyup = function(){
             submit.disabled = false;
-            console.log("u gay");
-        }
-    }
-}
+        };
+    };
+};
 
 signupBtn.onclick = function(){
     document.getElementById("inputName").value = "";
@@ -49,11 +48,9 @@ signupBtn.onclick = function(){
     document.querySelector('p').innerHTML = "";
     document.getElementById('lostPassword').innerHTML = "";
     submit.innerHTML = "Sign up";
-}
+};
 
 //when member signs in or sign up
-let memberinfo = []
-
 submit.onclick = function(e){
     e.preventDefault();
     submit.disabled = true;
@@ -73,7 +70,7 @@ submit.onclick = function(e){
             "content-type": "application/json",
             "x-apikey": "63df19783bc6b255ed0c4685",
             "cache-control": "no-cache"
-        },}
+        },};
 
         $.ajax(settings).done(function (response){
         console.log(response);
@@ -97,7 +94,7 @@ submit.onclick = function(e){
             signinEmail.value = "";
             signinPassword.value = "";
         }
-    })
+    });
     }
 
     //sign up
@@ -120,7 +117,7 @@ submit.onclick = function(e){
         },
         "processData": false,
         "data": JSON.stringify(jsondata)
-        }
+        };
 
         $.ajax(settings).done(function (response) {
         console.log(response);
@@ -134,4 +131,4 @@ submit.onclick = function(e){
         signupPassword.value = "";
         submit.disabled = true;
     }
-}
+};
