@@ -15,7 +15,9 @@ $(document).ready(function() {
             sessionStorage.removeItem("member");
             location.href = '../html/index.html';
             }
-    }}});
+    };
+  }
+});
     
     $.ajax({url:"../html/footer.html", success:function(result){
         $("footer").html(result);
@@ -40,10 +42,10 @@ var settings = {
       "x-apikey": "63df19783bc6b255ed0c4685",
       "cache-control": "no-cache"
     }
-  }
+  };
   
   $.ajax(settings).then(function (response) {
-    console.log(response)
+    console.log(response);
 
     //loading product into html
     for (i=0; i<response.length; i++){
@@ -53,7 +55,7 @@ var settings = {
       let pricediv = document.createElement("div");
       let reviewdiv = document.createElement("p");
       let imagediv = document.createElement("img");
-      let containImg = document.createElement("div")/*Liwei */
+      let containImg = document.createElement("div");/*Liwei */
       
       let pname = response[i].Name;
       let pprice = response[i].Price;
@@ -66,7 +68,7 @@ var settings = {
 
       namediv.classList.add("name");
       pricediv.classList.add("price");
-      pricediv.setAttribute("data-price",pprice)
+      pricediv.setAttribute("data-price",pprice);
       reviewdiv.classList.add("review");
       imagediv.classList.add("image");
       containImg.append(imagediv); /*Liwei */
@@ -104,16 +106,16 @@ var settings = {
         else if (product.type === "Phone"){
           productdiv.style.display = "block";
         }
-      })
+      });
     }
     
     /*Liwei*/
     $("#products").addClass("row");
     $("#products").children().addClass("col-md-4");
-    let btn = $("<button>")
-    btn.addClass("addCart btn btn-primary btn-lg btn-block")
-    btn.attr("type","button")
-    btn.text("Add to cart")
+    let btn = $("<button>");
+    btn.addClass("addCart btn btn-primary btn-lg btn-block");
+    btn.attr("type","button");
+    btn.text("Add to cart");
     $("#products").children().append(btn);
     $(".image").addClass("img-fluid");
     $(".image").parent().addClass("imgContainer");
@@ -122,22 +124,22 @@ var settings = {
     /*Add to cart button*/
     $(".addCart").on("click",function(event){
 
-      let addCartBtn = event.target
+      let addCartBtn = event.target;
       let cardDiv = $(addCartBtn).parent();
       /*Get the img, name, price and rating from the product card*/
-      let img = cardDiv.find("img").attr("src")
-      let name = cardDiv.find(".name").text()
-      let price = cardDiv.find(".price").data("price")
-      let rating = cardDiv.find(".review").text()
-      console.log(img,name,price,rating)
+      let img = cardDiv.find("img").attr("src");
+      let name = cardDiv.find(".name").text();
+      let price = cardDiv.find(".price").data("price");
+      let rating = cardDiv.find(".review").text();
+      console.log(img,name,price,rating);
 
       /*CartList from localstorage*/
-      let cart = JSON.parse(localStorage.getItem("cart"))
+      let cart = JSON.parse(localStorage.getItem("cart"));
 
       /*When CartList from localstorage is null, give cart an empty array*/
       if(JSON.parse(localStorage.getItem("cart"))==null)
       {
-        cart = []
+        cart = [];
       }
 
       /*new Item object function*/
@@ -153,7 +155,7 @@ var settings = {
       let newItem = new item(img,name,price,rating,1);
       
       /*Loop through the cart to see if the current item already existed in cart*/
-      var found = false
+      var found = false;
       for (let i = 0; i < cart.length; i++) {
         if(cart[i].name == name){
           cart[i].qty +=1;
@@ -239,7 +241,7 @@ dropdowns.forEach(dropdown =>{
             productdiv.style.display = "block";
             product.display = true;
           }
-        })
+        });
       }
       //accessories
       else if (optionAccessories.className === "list-selected"){
@@ -253,7 +255,7 @@ dropdowns.forEach(dropdown =>{
             productdiv.style.display = "block";
             product.display = true;
           }
-        })
+        });
       }
 
       //price range
@@ -264,7 +266,7 @@ dropdowns.forEach(dropdown =>{
             productdiv.style.display = "block";
             product.display = true;
           }
-        })
+        });
       }
       //100 to 300 dollars
       else if (hundredto3.className === "list-selected"){
@@ -280,7 +282,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //300 to 500 dollars
       else if (threehundredto5.className === "list-selected"){
@@ -296,7 +298,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //500 to 700 dollars
       else if (fivehundredto7.className === "list-selected"){
@@ -312,7 +314,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //700 to 900 dollars
       else if (sevenhundredto9.className === "list-selected"){
@@ -328,7 +330,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //more than 900 dollars
       else if (morethan900.className === "list-selected"){
@@ -344,7 +346,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
 
       //all brands
@@ -355,7 +357,7 @@ dropdowns.forEach(dropdown =>{
             productdiv.style.display = "block";
             product.display = true;
           }
-        })
+        });
       }
       //apple
       else if (apple.className === "list-selected"){
@@ -371,7 +373,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //xiaomi
       else if (xiaomi.className === "list-selected"){
@@ -387,7 +389,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //google
       else if (google.className === "list-selected"){
@@ -403,7 +405,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //others
       else if (others.className === "list-selected"){
@@ -420,7 +422,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
 
       //review
@@ -431,7 +433,7 @@ dropdowns.forEach(dropdown =>{
             productdiv.style.display = "block";
             product.display = true;
           }
-        })
+        });
       }
       //3 stars
       else if (threestars.className === "list-selected"){
@@ -447,7 +449,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //4 stars
       else if (fourstars.className === "list-selected"){
@@ -463,7 +465,7 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
       //5 stars
       else if (fivestars.className === "list-selected"){
@@ -479,11 +481,11 @@ dropdowns.forEach(dropdown =>{
               product.display = false;
             }
           }
-        })
+        });
       }
 
     });
-  })
+  });
 });
 
 //search bar
@@ -511,8 +513,8 @@ searchInput.addEventListener("input", (e) => {
           if (product.id === item.id){
             product.display = true;
           }
-        })
-      })
+        });
+      });
     }
-  })
-})
+  });
+});
