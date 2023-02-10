@@ -82,7 +82,7 @@ submit.onclick = function(e){
                     // let newusername = new username(response[i].name);
                     // memberinfo.push(newusername);
                     sessionStorage.setItem("member", JSON.stringify(response[i].Name));
-                    location.href = '../html/home.html';
+                    location.href = '../html/index.html';
                     submit.disabled = false;
                     break;
                 }

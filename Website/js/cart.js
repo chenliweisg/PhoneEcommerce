@@ -37,7 +37,7 @@ $(document).ready(function() {
         btn.attr("type","button");
         btn.addClass("btn btn-danger")
         btn.text("Return to Shop");
-        a.attr("href","../html/home.html");
+        a.attr("href","../html/index.html");
         a.append(btn);
         div.append(img,p,a)
         $('.cart .row').append(div)       
