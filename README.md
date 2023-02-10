@@ -94,3 +94,12 @@ Credit to Liwei
 ### Acknowledgements
 
 [Web design & wireframes inspiration](https://dribbble.com/timemachine2244/collections/6252658-assignment-2?utm_source=Clipboard_%22clipboard_collection%22&utm_campaign=%22timemachine2244%22&utm_content=%22assignment%202%22&utm_medium=Social_Share)
+
+## Videos
+
+### Website functions
+https://user-images.githubusercontent.com/116059285/218132148-d24ed33a-ae7b-47e7-9b2c-21346288de48.mp4
+
+### Responsive website
+https://user-images.githubusercontent.com/116059285/218132269-8f7dc667-355d-455f-9322-08dc3952dee3.mp4
+
