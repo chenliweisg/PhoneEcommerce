@@ -8,11 +8,11 @@ let submit = document.getElementById("signup");
 //make submit button to be disabled
 submit.disabled = true;
 
+//when you type something the submit becomes abled
 document.getElementById("inputName").onkeyup = function(){
     document.getElementById("inputEmail").onkeyup = function(){
         document.getElementById("inputPassword").onkeyup = function(){
             submit.disabled = false;
-            console.log("u gay");
         };
     };
 };
