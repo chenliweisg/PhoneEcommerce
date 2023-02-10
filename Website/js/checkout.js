@@ -59,7 +59,7 @@ $(document).ready(function() {
     subtotal+=cart[i].price * cart[i].qty
     }
 
-    $(".subtotal h6").text("$"+subtotal)
+    $(".subtotal h6").text("$"+(subtotal).toFixed(2))
     $(".totalAmt h6").eq(1).text("$"+(subtotal-219).toFixed(2))
 
     function hideOnlinePayment(d){

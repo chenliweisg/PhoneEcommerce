@@ -45,6 +45,11 @@ section
     border: none;
 }
 
+.item #qty{
+    background-color: transparent;
+}
+
+
 .item input::-webkit-outer-spin-button, .item input::-webkit-inner-spin-button 
 {
     -webkit-appearance: none;

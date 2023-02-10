@@ -13,7 +13,7 @@ $(document).ready(function() {
         $('.cart-items .card').append('<div class="item row d-flex justify-content-between align-items-center"></div>')
         var prodImg = '<div class="prod-img col-sm-12 col-md-3"><img src="" class="img-fluid" alt="Responsive image"></div>'
         var prodDesc ='<div class="prod-desc col-sm-12 col-md-3"><h6 class="prod-name"></h6><p class="review"><i class="fa fa-star text-warning"></i></p></div>'
-        var prodQty =`<div class="prod-qty d-flex col-sm-12 col-md-3 "><button class="btn minus-btn btn" ><i class="fas fa-minus"></i></button><input id="qty" min="0" name="qty" value="1" type="number" class="form-control" /><button class="btn plus-btn btn"><i class="fas fa-plus"></i></button></div>`
+        var prodQty =`<div class="prod-qty d-flex col-sm-12 col-md-3 "><button class="btn minus-btn btn" ><i class="fas fa-minus"></i></button><input id="qty" min="0" name="qty" value="1" type="number" class="form-control" readonly/><button class="btn plus-btn btn"><i class="fas fa-plus"></i></button></div>`
         var ProdPrice =`<div class="prod-price col-sm-12 col-md-2" data-price=""><h6></h6></div>`
         var RemoveProd =`<div class="remove-prod col-sm-12 col-md-1"><a href="#!" class="text-danger remove-btn"><i class="fa-solid fa-trash-can fa-lg"></i></a><button type="button" class="btn btn-danger remove-btn">Remove</button></div>`
         $('.item').eq(i).append(prodImg,prodDesc,prodQty,ProdPrice,RemoveProd);
@@ -153,9 +153,12 @@ $(document).ready(function() {
             $('.item').eq(z).find('.prod-price').data("price",cart[z].price)
             }
 
+            /*update the number of item in the card*/
+            $(".noOfItem").text(cart.length+ " items")
+            
             let newItemPrice = parseFloat($('.item').eq(cart.length-1).find('.prod-price').data("price"))
             console.log(newItemPrice)
-                /*Update SSubtotal*/
+            /*Update Subtotal*/
             subtotal += newItemPrice
             $(".subtotal h6").text("$"+subtotal.toFixed(2))
 
@@ -163,7 +166,7 @@ $(document).ready(function() {
             totalAmt = subtotal - 219
             $(".totalAmt h5").text("$"+totalAmt.toFixed(2))     
             
-                        /*Unhide the cart section & hide the empty cart page*/
+            /*Unhide the cart section & hide the empty cart page*/
             $('.cart-items,.summary').show()
             $('.cart-empty').hide()
         });
@@ -173,6 +176,9 @@ $(document).ready(function() {
               
     /*CartList from localstorage*/
     let cart = JSON.parse(localStorage.getItem("cart"));
+
+    /*Display the number of item in the card*/
+    $(".noOfItem").text(cart.length+ " items")
 
     /*Hide if cart is empty */
     if(cart.length == 0)
@@ -231,6 +237,9 @@ $(document).ready(function() {
             }
         }
 
+        /*update the number of item in the card*/
+        $(".noOfItem").text(cart.length+ " items")
+
         /*Update Subtotal*/
         subtotal -= price*qty
         $(".subtotal h6").text("$"+subtotal.toFixed(2))
@@ -285,6 +294,9 @@ $(document).ready(function() {
                 }
             }
         }
+
+        /*update the number of item in the card*/
+        $(".noOfItem").text(cart.length+ " items")
 
         /*Update Subtotal*/
         subtotal -= price
