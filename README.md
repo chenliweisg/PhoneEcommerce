@@ -22,37 +22,42 @@ click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf
 ## Features
 
 ### Existing features
+1. Sign up
+2. Login
+3. Search for a product
+4. Filter product
+5. Add to cart
+6. Increase or Decrease quantity.
+7. Remove a product.
+8. Product recommendation.
 
 ### Features Left to Implement
 
-- Feature 1 - scroll back to top button
-- Feature 2 - Social media icon will disappear when scrolled to the bottom of the page.
-- Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, timer game, calculation game)
-- Feature 4 - Product recommendation.
-- Feature 5 - Daily login reward
-- Feature 6 - Search for product
-- Feature 7 - left and right button to view more products
-- Feature 8 - video, image, sound
-- Feature 9 - Map
-- Feature 10 - Rating
-- Feature 11 - breadcrumbs
-- Feature 12 - change username & password & set profile image
-- Feature 13 - top up user balance
-- Feature 14 - filter category
-- Feature 15 - Add/remove quantity
-- Feature 16 - product promotion for 24 hour
+- scroll back to top button
+- Social media icon will disappear when scrolled to the bottom of the page.
+- Reward games for discount. (e.g Lucky wheel, product quiz, timer game, calculation game)
+- Daily login reward
+- left and right button to view more products
+- video, sound
+- Map
+- breadcrumbs
+- change username & password & set profile image
+- top up user balance
+- product promotion for 24 hour
 
 ## Technology used
 
 In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-* HTMl (Use to build the structure of the website)
-* CSS (Use to style the website)
-* Javascript (A faster method create, retrieve a html content and add evenlistener.)
-* Jquery (retrieve a html content, add evenlistener, display navbar and header in the webpage.)
-* Ajax (Allows web pages to be updated asynchronously by exchanging data)
-* RestDB (Use to store all the product's data.)
-* Bootstrap (make the website responsive, good looking and template from the website to create navbar.)
+* HTMl Use to build the structure of the website
+* CSS Use to style the website
+* Javascript A faster method create, retrieve a html content and add evenlistener.
+* [Jquery](https://jquery.com/) retrieve a html content, add evenlistener, display navbar and header in the webpage.
+* [Ajax] Allows web pages to be updated asynchronously by exchanging data.
+* [RestDB] (Use to store all the product's data.) https://restdb.io/
+* [Bootstrap verison 4.6] (https://getbootstrap.com/docs/4.6/getting-started/introduction/) make the website responsive, good looking and template from the website to create navbar.
+* [Lottie](https://lottiefiles.com/) Give the website an animation icon.
+* [fontawesome](https://fontawesome.com/) Internet icon library embedded by HTML.
 
 ## Testing
 
@@ -64,7 +69,16 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ### Media
 
-- The photos used in this site were obtained from ...
+#### Index page
+* [Header background image](https://i.pinimg.com/originals/c5/b8/f2/c5b8f2fb9d1cee516d5e3d1dd56ab5af.jpg)
+* [Smartphone background image](https://media.wired.com/photos/62d75d34ddaaa99a1df8e61d/master/pass/Phone-Camera-Webcam-Gear-GettyImages-1241495650.jpg)
+* [Smartphone background image:hover](https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+* [Accessories background image](https://www.rd.com/wp-content/uploads/2017/08/Untitled-4phoneaccessories.jpg)
+* [Accessories background image:hover](https://images.pexels.com/photos/3780680/pexels-photo-3780680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+* [Promotion background image](https://cdn.macstories.net/icons1529553323730-1637678091349.png)
+* [Promotion item image](https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png)
+
+##### Products
 
 ### Acknowledgements
 
