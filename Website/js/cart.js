@@ -1,17 +1,20 @@
 $(document).ready(function() {
     $.ajax({url:"../html/navbar.html", success:function(result){
         $("nav.bg-dark").html(result);
+        
+        let login = document.getElementById("login");
+        // display logout when user login
         if (JSON.parse(sessionStorage.getItem("member")) != null){
-            let login = document.getElementById("login");
             login.innerHTML = `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`;
-          }
+        }
+
+        //display login when user logout
         login.onclick = function(e){
         if (login.innerHTML === `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`){
             e.preventDefault();
             sessionStorage.removeItem("member");
-            console.log("babi");
             location.href = '../html/index.html';
-        }
+            }
         }
     }});
     

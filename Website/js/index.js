@@ -2,11 +2,14 @@ $(document).ready(function() {
   /**Load Nav bar and footer into the webpage*/
 $.ajax({url:"../html/navbar.html", success:function(result){
     $("nav.bg-dark").html(result);
-    // display log out
+    
     let login = document.getElementById("login");
+    // display logout when user login
     if (JSON.parse(sessionStorage.getItem("member")) != null){
       login.innerHTML = `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`;
     }
+
+    //display login when user logout
     login.onclick = function(e){
       if (login.innerHTML === `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`){
         e.preventDefault();

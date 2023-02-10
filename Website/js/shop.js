@@ -1,15 +1,18 @@
 $(document).ready(function() {
     $.ajax({url:"../html/navbar.html", success:function(result){
         $("nav.bg-dark").html(result);
+
+        let login = document.getElementById("login");
+        //display logout when user login
         if (JSON.parse(sessionStorage.getItem("member")) != null){
-          let login = document.getElementById("login");
           login.innerHTML = `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`;
         }
+
+        //display login when user logout
         login.onclick = function(e){
           if (login.innerHTML === `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`){
             e.preventDefault();
             sessionStorage.removeItem("member");
-            console.log("babi");
             location.href = '../html/index.html';
             }
     }}});
@@ -26,6 +29,7 @@ let phones = [];
 let accessories = [];
 let hiddenitemslist = [];
 
+//get product info
 var settings = {
     "async": true,
     "crossDomain": true,
@@ -41,6 +45,7 @@ var settings = {
   $.ajax(settings).then(function (response) {
     console.log(response)
 
+    //loading product into html
     for (i=0; i<response.length; i++){
       let root = document.getElementById("products");
       let container = document.createElement("div");
@@ -75,6 +80,7 @@ var settings = {
       container.classList.add("products-container");
       root.appendChild(container);
 
+      //storing the products
       const item = {name: pname.toLowerCase(), price: pprice, id: response[i]._id, brand: response[i].Brand, type: response[i].ProductType, display: true, review: response[i].Review};
       products.push(item);
 
@@ -201,12 +207,14 @@ dropdowns.forEach(dropdown =>{
   const options = dropdown.querySelectorAll(".menu li");
   const selected = dropdown.querySelector(".selected");
 
+  //add event listener for the filters
   select.addEventListener("click", () =>{
     select.classList.toggle("select-clicked");
     caret.classList.toggle("caret-rotate");
     menu.classList.toggle("menu-open");
   });
 
+  //add event listener for the options
   options.forEach(option =>{
     option.addEventListener("click", () =>{
       selected.innerText = option.innerText;
@@ -219,7 +227,7 @@ dropdowns.forEach(dropdown =>{
       });
       option.className = "list-selected";
 
-      //products
+      //phones
       if (optionPhone.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -233,6 +241,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //accessories
       else if (optionAccessories.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -257,6 +266,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //100 to 300 dollars
       else if (hundredto3.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -272,6 +282,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //300 to 500 dollars
       else if (threehundredto5.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -287,6 +298,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //500 to 700 dollars
       else if (fivehundredto7.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -302,6 +314,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //700 to 900 dollars
       else if (sevenhundredto9.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -317,6 +330,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //more than 900 dollars
       else if (morethan900.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -333,7 +347,7 @@ dropdowns.forEach(dropdown =>{
         })
       }
 
-      //brands
+      //all brands
       if (allbrands.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -343,6 +357,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //apple
       else if (apple.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -358,6 +373,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //xiaomi
       else if (xiaomi.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -373,6 +389,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //google
       else if (google.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -388,6 +405,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //others
       else if (others.className === "list-selected"){
         products.forEach(product => {
           const brand = product.brand;
@@ -415,6 +433,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //3 stars
       else if (threestars.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -430,6 +449,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //4 stars
       else if (fourstars.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -445,6 +465,7 @@ dropdowns.forEach(dropdown =>{
           }
         })
       }
+      //5 stars
       else if (fivestars.className === "list-selected"){
         products.forEach(product => {
           const productdiv = document.getElementById(product.id);
@@ -465,9 +486,9 @@ dropdowns.forEach(dropdown =>{
   })
 });
 
+//search bar
 searchInput.addEventListener("input", (e) => {
   const input = e.target.value.toLowerCase();
-  console.log(input);
   products.forEach(product => {
     const productdiv = document.getElementById(product.id);
     if (product.display === true){

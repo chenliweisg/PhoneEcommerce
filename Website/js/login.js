@@ -7,6 +7,7 @@ let clickhere = document.querySelector('p');
 let submit = document.getElementById("signup");
 let inputFields = document.querySelectorAll(".input");
 
+//make submit button to be disabled
 submit.disabled = true;
 
 document.getElementById("inputName").onkeyup = function(){
@@ -50,16 +51,19 @@ signupBtn.onclick = function(){
     submit.innerHTML = "Sign up";
 }
 
+//when member signs in or sign up
 let memberinfo = []
 
 submit.onclick = function(e){
     e.preventDefault();
     submit.disabled = true;
 
+    //sign in
     if (submit.innerHTML === "Sign in"){
         let signinEmail = document.getElementById("inputEmail");
         let signinPassword = document.getElementById("inputPassword");
 
+        //api get
         let settings = {
             "async": true,
             "crossDomain": true,
@@ -74,13 +78,9 @@ submit.onclick = function(e){
         $.ajax(settings).done(function (response){
         console.log(response);
 
+            //loop to check if email and password is correct
             for (i=0; i<response.length; i++){
                 if (signinEmail.value === response[i].Email && signinPassword.value === response[i].Password) {
-                    // function username(name){
-                    //     this.name = name;
-                    // }
-                    // let newusername = new username(response[i].name);
-                    // memberinfo.push(newusername);
                     sessionStorage.setItem("member", JSON.stringify(response[i].Name));
                     location.href = '../html/index.html';
                     submit.disabled = false;
@@ -91,6 +91,7 @@ submit.onclick = function(e){
                 }
             }
         
+        //wrong email or password
         if (submit.disabled === true){
             alert("Invalid email or password");
             signinEmail.value = "";
@@ -98,11 +99,14 @@ submit.onclick = function(e){
         }
     })
     }
+
+    //sign up
     else if (submit.innerHTML === "Sign up"){
         let signupName = document.getElementById("inputName");
         let signupEmail = document.getElementById("inputEmail");
         let signupPassword = document.getElementById("inputPassword");
 
+        //api post
         let jsondata = {"Email": signupEmail.value,"Password": signupPassword.value, "Name": signupName.value};
         let settings = {
         "async": true,
@@ -122,13 +126,10 @@ submit.onclick = function(e){
         console.log(response);
         });
 
+        //clear form
         signupName.value = "";
         signupEmail.value = "";
         signupPassword.value = "";
         submit.disabled = true;
-        // location.href = '../html/home.html';
     }
 }
-
-//lolololololo
-//xdxdxd21
