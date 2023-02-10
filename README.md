@@ -1,4 +1,4 @@
-# xPhone :iphone:
+# LWBD :iphone:
 
 This website will sell a variety of phones. Customers can compare the phones and decide what is the best for them. They can also login and play reward games for coupons. The objective of this website is to attract customers to buy phones from us.
 
@@ -17,41 +17,45 @@ This website will sell a variety of phones. Customers can compare the phones and
 - I want to see my transaction history, so i can know how much i have spend in the past.
 - I want to change the password for my account so it's easiler for me to remember.
 
-click here to view the prototype <u>https://xd.adobe.com/view/f6d62f94-28c2-47bf-a5dc-ad50f5833191-a385/</u>
+Click here to view the [prototype](https://xd.adobe.com/view/f6d62f94-28c2-47bf-a5dc-ad50f5833191-a385/)
 
 ## Features
 
 ### Existing features
+1. Sign up
+2. Login
+3. Search for a product
+4. Filter product
+5. Add to cart
+6. Increase or Decrease quantity.
+7. Remove a product.
+8. Product recommendation.
 
 ### Features Left to Implement
 
-- Feature 1 - scroll back to top button
-- Feature 2 - Social media icon will disappear when scrolled to the bottom of the page. (https://www.mockplus.com/blog/post/interactive-website-example)
-- Feature 3 - Reward games for discount. (e.g Lucky wheel, product quiz, timer game, calculation game)
-- Feature 4 - Product recommendation.
-- Feature 5 - Daily login reward
-- Feature 6 - Search for product
-- Feature 7 - left and right button to view more products (https://blog.hubspot.com/website/interactive-websites)
-- Feature 8 - video, image, sound
-- Feature 9 - Map
-- Feature 10 - Rating
-- Feature 11 - breadcrumbs
-- Feature 12 - change username & password & set profile image
-- Feature 13 - top up user balance
-- Feature 14 - filter category
-- Feature 15 - Add/remove quantity
-- Feature 16 - product promotion for 24 hour
+- scroll back to top button
+- Social media icon will disappear when scrolled to the bottom of the page.
+- Reward games for discount. (e.g Lucky wheel, product quiz, timer game, calculation game)
+- Daily login reward
+- left and right button to view more products
+- video, sound
+- Map
+- breadcrumbs
+- change username & password & set profile image
+- top up user balance
+- product promotion for 24 hour
 
 ## Technology used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-
-<ul>
-  <li>HTML (Structure of website)</li>
-  <li>Css (beautiful the website)</li>
-  <li>Javascript (function the website)</li>
-  <li>Adobe XD (website layout idea )</li>
-</ul>
+* HTMl (Used to build the structure of the website)
+* CSS (Used to style the website)
+* Javascript (To create, retrieve, add HTML content and adding evenlistener)
+* [Jquery](https://jquery.com/) (Retrieve HTML content, add eventlistener, display navbar and header in the webpage)
+* Ajax (Allows web pages to be updated asynchronously by exchanging data)
+* [RestDB](https://restdb.io/) (Use to store all the product's data.)
+* [Bootstrap verison 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) (Make the website responsive, good looking and template from the website to create navbar)
+* [Lottie](https://lottiefiles.com/) (Give the website an animation icon)
+* [fontawesome](https://fontawesome.com/) (Internet icon library embedded by HTML)
 
 ## Testing
 
@@ -59,12 +63,34 @@ In this section, you should mention all of the languages, frameworks, libraries,
 
 ### Content
 
-- The text for section Y was copied from the Wikipedia article Z
+Information about products were found on google search engine.
 
 ### Media
 
-- The photos used in this site were obtained from ...
+#### Index page
+* [Header background image](https://i.pinimg.com/originals/c5/b8/f2/c5b8f2fb9d1cee516d5e3d1dd56ab5af.jpg)
+* [Smartphone background image](https://media.wired.com/photos/62d75d34ddaaa99a1df8e61d/master/pass/Phone-Camera-Webcam-Gear-GettyImages-1241495650.jpg)
+* [Smartphone background image:hover](https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+* [Accessories background image](https://www.rd.com/wp-content/uploads/2017/08/Untitled-4phoneaccessories.jpg)
+* [Accessories background image:hover](https://images.pexels.com/photos/3780680/pexels-photo-3780680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
+* [Promotion background image](https://cdn.macstories.net/icons1529553323730-1637678091349.png)
+* [Promotion item image](https://www.pngmart.com/files/13/Apple-Airpods-PNG-Transparent-Image.png)
+
+#### Products
+* [Xiaomi12 Pro](https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1648123671.21955073.png)
+* [iPhone 14](https://media.croma.com/image/upload/v1662655029/Croma%20Assets/Communication/Mobiles/Images/261983_4_mod9ul.png)
+* [iPhone 13](https://pngimg.com/uploads/iphone_13/iphone_13_PNG27.png)
+* [Xiaomi Redmi Note 11 Smartphone](https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-11-pro/specs01.png)
+* [Apple AirPods(3rd generation)](https://www.freepnglogos.com/uploads/airpods-png/imagic-baroda-airpods-5.png)
+* [Google Pixel 7](https://lh3.googleusercontent.com/pUCr-SNE-T8XMC77yvmneR9D6jrFAeYyJjiPbHzXWvIiNzWz9wEqtDhnDYERGC3xft3Fun28vwnjaae2NXBF6FexQYQZN8pqJg=rw-e365-w1024)
+* [iPhone 12](https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662424588/Croma%20Assets/Communication/Mobiles/Images/229925_lhcfej.png/mxw_2048,f_auto)
+
+#### Cart
+* [Empty cart image](http://hsnbazar.com/images/empty-cart.png)
+
+#### Logo
+Credit to Liwei
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+[Web design & wireframes inspiration](https://dribbble.com/timemachine2244/collections/6252658-assignment-2?utm_source=Clipboard_%22clipboard_collection%22&utm_campaign=%22timemachine2244%22&utm_content=%22assignment%202%22&utm_medium=Social_Share)
