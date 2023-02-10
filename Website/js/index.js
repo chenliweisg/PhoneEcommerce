@@ -3,9 +3,17 @@ $(document).ready(function() {
 $.ajax({url:"../html/navbar.html", success:function(result){
     $("nav.bg-dark").html(result);
     // display log out
+    let login = document.getElementById("login");
     if (JSON.parse(sessionStorage.getItem("member")) != null){
-      let login = document.getElementById("login");
       login.innerHTML = `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`;
+    }
+    login.onclick = function(e){
+      if (login.innerHTML === `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`){
+        e.preventDefault();
+        sessionStorage.removeItem("member");
+        console.log("babi");
+        location.href = '../html/index.html';
+      }
     }
 }});
 
@@ -125,14 +133,5 @@ $(".category .accs h3").on("click",function(event){
   $(location).prop('href', '../html/shop.html')
 });
 
-//display username on login
+//display logout to login
 
-
-// addEventListener('DOMContentLoaded', () => {
-//   let username = JSON.parse(sessionStorage.getItem("member"));
-//   // username = JSON.parse(storedusername);
-//   console.log(username);
-
-//   let login = document.getElementById("login");
-//   login.innerHTML = `<i class="fa-solid fa-right-to-bracket mr-2"></i>` + username;
-// })

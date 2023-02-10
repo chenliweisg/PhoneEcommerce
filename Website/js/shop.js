@@ -5,7 +5,14 @@ $(document).ready(function() {
           let login = document.getElementById("login");
           login.innerHTML = `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`;
         }
-    }});
+        login.onclick = function(e){
+          if (login.innerHTML === `<i class="fa-solid fa-right-to-bracket mr-2"></i>Logout`){
+            e.preventDefault();
+            sessionStorage.removeItem("member");
+            console.log("babi");
+            location.href = '../html/index.html';
+            }
+    }}});
     
     $.ajax({url:"../html/footer.html", success:function(result){
         $("footer").html(result);
