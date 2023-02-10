@@ -17,7 +17,7 @@ $.ajax({url:"../html/navbar.html", success:function(result){
         console.log("babi");
         location.href = '../html/index.html';
       }
-    }
+    };
 }});
 
 $.ajax({url:"../html/footer.html", success:function(result){
@@ -34,7 +34,7 @@ $.ajax({url:"../html/footer.html", success:function(result){
           "x-apikey": "63df19783bc6b255ed0c4685",
           "cache-control": "no-cache"
         }
-      }
+      };
 
 $.ajax(settings).done(function (response) {
     console.log(response);
@@ -43,52 +43,52 @@ $.ajax(settings).done(function (response) {
         console.log(i);
 
         /*Create Product card*/
-        let prodName = $("<h5>")
-        prodName.addClass("product-name")
-        let prodPrice = $("<h5>")
-        prodPrice.addClass("product-price")
-        let review = $("<p>")
-        review.addClass("review")
-        let starIcon = $("<i>")
-        starIcon.addClass("fa fa-star text-warning")
-        let button = $("<button>")
-        button.addClass("add-cart btn btn-primary btn-lg")
-        button.attr("type","button")
-        let cardbody = $("<div>")
-        cardbody.addClass("card-body")
-        let prodImg = $("<img>")
-        prodImg.attr("src",response[i].Image)
-        prodImg.addClass("card-img-top")
-        let card = $("<div>")
-        card.addClass("card col-md-4 text-black text-center")
-        prodName.append(response[i].Name)
-        prodPrice.append(response[i].Price)
-        review.append(starIcon)
-        review.data("rating",response[i].Review)
-        review.append(response[i].Review)
-        button.text("Add to cart")
-        cardbody.append(prodName,prodPrice,review,button)
-        card.append(prodImg,cardbody)
-        $(".product .row").append(card)
+        let prodName = $("<h5>");
+        prodName.addClass("product-name");
+        let prodPrice = $("<h5>");
+        prodPrice.addClass("product-price");
+        let review = $("<p>");
+        review.addClass("review");
+        let starIcon = $("<i>");
+        starIcon.addClass("fa fa-star text-warning");
+        let button = $("<button>");
+        button.addClass("add-cart btn btn-primary btn-lg");
+        button.attr("type","button");
+        let cardbody = $("<div>");
+        cardbody.addClass("card-body");
+        let prodImg = $("<img>");
+        prodImg.attr("src",response[i].Image);
+        prodImg.addClass("card-img-top");
+        let card = $("<div>");
+        card.addClass("card col-md-4 text-black text-center");
+        prodName.append(response[i].Name);
+        prodPrice.append(response[i].Price);
+        review.append(starIcon);
+        review.data("rating",response[i].Review);
+        review.append(response[i].Review);
+        button.text("Add to cart");
+        cardbody.append(prodName,prodPrice,review,button);
+        card.append(prodImg,cardbody);
+        $(".product .row").append(card);
       }
 
       /*Add to cart button*/
       $(".add-cart").on("click",function(event){
-        var btnClicked = event.target
+        var btnClicked = event.target;
         
         /*Get the img, name, price and rating of the product.*/
-        var img = $(btnClicked).parent().siblings('.card-img-top').attr("src")
-        var name = $(btnClicked).siblings('.product-name').text()
-        var price = $(btnClicked).siblings('.product-price').text()
-        var rating = $(btnClicked).siblings('.review').data("rating")
+        var img = $(btnClicked).parent().siblings('.card-img-top').attr("src");
+        var name = $(btnClicked).siblings('.product-name').text();
+        var price = $(btnClicked).siblings('.product-price').text();
+        var rating = $(btnClicked).siblings('.review').data("rating");
 
         /*CartList from localstorage*/
-        let cart = JSON.parse(localStorage.getItem("cart"))
+        let cart = JSON.parse(localStorage.getItem("cart"));
 
         /*When CartList from localstorage is null, give cart an empty array*/
         if(JSON.parse(localStorage.getItem("cart"))==null)
         {
-          cart = []
+          cart = [];
         }
 
         /*new Item object function*/
@@ -104,7 +104,7 @@ $.ajax(settings).done(function (response) {
         let newItem = new item(img,name,price,rating,1);
         
         /*Loop through the cart to see if the current item already existed in cart*/
-        var found = false
+        var found = false;
         for (let i = 0; i < cart.length; i++) {
           if(cart[i].name == name){
             cart[i].qty +=1;
@@ -129,12 +129,9 @@ $.ajax(settings).done(function (response) {
 
 /*when the Category is clicked direct to product page*/
 $(".category .phone h3").on("click",function(event){
-  $(location).prop('href', '../html/shop.html')
+  $(location).prop('href', '../html/shop.html');
 });
 
 $(".category .accs h3").on("click",function(event){
-  $(location).prop('href', '../html/shop.html')
+  $(location).prop('href', '../html/shop.html');
 });
-
-//display logout to login
-
