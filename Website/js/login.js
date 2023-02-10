@@ -1,11 +1,9 @@
 let signupBtn = document.getElementById("signupBtn");
 let signinBtn = document.getElementById("signinBtn");
 let nameField = document.getElementById("nameField");
-// let title = document.getElementById("title");
 let lostPassword = document.getElementById("lostPassword");
 let clickhere = document.querySelector('p');
 let submit = document.getElementById("signup");
-// let inputFields = document.querySelectorAll(".input");
 
 //make submit button to be disabled
 submit.disabled = true;
