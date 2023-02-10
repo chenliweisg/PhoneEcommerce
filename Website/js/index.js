@@ -138,3 +138,8 @@ $(".category .phone h3").on("click",function(event){
 $(".category .accs h3").on("click",function(event){
   $(location).prop('href', '../html/shop.html');
 });
+
+/*When user clicked "Start to shop"*/
+$(".startToshop").on("click",function(event){
+  $(location).prop('href', '../html/shop.html');
+});
