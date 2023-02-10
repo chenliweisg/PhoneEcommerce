@@ -59,6 +59,8 @@ Click here to view the [prototype](https://xd.adobe.com/view/f6d62f94-28c2-47bf-
 
 ## Testing
 
+[Testing document](https://connectnpedu-my.sharepoint.com/:w:/g/personal/s10239969_connect_np_edu_sg/EbhwabuZAyZPvgOW4Zv0cGYBEOEt5fJRqlasaPQKbr0sIw?e=oyKcYz)
+
 ## Credits
 
 ### Content
@@ -84,6 +86,8 @@ Information about products were found on google search engine.
 * [Apple AirPods(3rd generation)](https://www.freepnglogos.com/uploads/airpods-png/imagic-baroda-airpods-5.png)
 * [Google Pixel 7](https://lh3.googleusercontent.com/pUCr-SNE-T8XMC77yvmneR9D6jrFAeYyJjiPbHzXWvIiNzWz9wEqtDhnDYERGC3xft3Fun28vwnjaae2NXBF6FexQYQZN8pqJg=rw-e365-w1024)
 * [iPhone 12](https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1662424588/Croma%20Assets/Communication/Mobiles/Images/229925_lhcfej.png/mxw_2048,f_auto)
+* [OPPO Find X5 Pro](https://image.oppo.com/content/dam/oppo/common/mkt/specs/find-x5/findx5-pro-v2.png)
+* [Galaxy S23 Ultra](https://www.starhub.com/content/dam/brochureware/samsung/galaxy-s23/carousel-microsite-galaxy-s23-ultra.png)
 
 #### Cart
 * [Empty cart image](http://hsnbazar.com/images/empty-cart.png)
@@ -103,3 +107,18 @@ https://user-images.githubusercontent.com/116059285/218132148-d24ed33a-ae7b-47e7
 ### Responsive website
 https://user-images.githubusercontent.com/116059285/218132269-8f7dc667-355d-455f-9322-08dc3952dee3.mp4
 
+## Contributions
+Bi De 
+- Login and products page
+- API implementation
+- Readme
+- Deploy github page
+
+Liwei
+- Wireframe
+- Index for html, js and css
+- Checkout for html, js and css
+- Cart for html, js and css
+- Navbar for html and css
+- Footer for html and css
+- Readme
